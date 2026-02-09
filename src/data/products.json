@@ -1,0 +1,263 @@
+{
+    "company": {
+        "name": "Venus Skin Care",
+        "location": "Gota, Ahmedabad, Gujarat, India",
+        "hours": "Mon - Sat: 10:00 AM - 07:00 PM",
+        "phone": [
+            "+91 91065 45311",
+            "+91 83200 39331"
+        ],
+        "email": "venusskincarelaser@gmail.com",
+        "stats": {
+            "experience": "8 Years",
+            "staff": "68",
+            "clients": "750+"
+        }
+    },
+    "categories": [
+        {
+            "id": "hair-removal",
+            "name": "Hair Removal Laser Machines",
+            "slug": "hair-removal-lasers",
+            "description": "Advanced diode laser systems for permanent hair removal",
+            "icon": "laser"
+        },
+        {
+            "id": "multifunctional",
+            "name": "Multifunctional Laser Machines",
+            "slug": "multifunctional-lasers",
+            "description": "Versatile IPL and laser systems for multiple treatments",
+            "icon": "multi-laser"
+        },
+        {
+            "id": "hydrafacial",
+            "name": "Hydra Facial Machines",
+            "slug": "hydra-facial",
+            "description": "Deep cleansing and skin rejuvenation systems",
+            "icon": "facial"
+        },
+        {
+            "id": "qswitch",
+            "name": "Q Switch ND YAG / Pico Laser",
+            "slug": "q-switch-laser",
+            "description": "Precision pigment and tattoo removal lasers",
+            "icon": "precision"
+        },
+        {
+            "id": "co2",
+            "name": "Co2 Fractional Laser",
+            "slug": "co2-fractional",
+            "description": "Skin resurfacing and wrinkle reduction",
+            "icon": "fractional"
+        },
+        {
+            "id": "hifu",
+            "name": "HIFU (Anti-Aging) Machines",
+            "slug": "hifu-anti-aging",
+            "description": "Non-invasive face and body lifting technology",
+            "icon": "anti-aging"
+        },
+        {
+            "id": "cautery",
+            "name": "Cautery Machines",
+            "slug": "cautery-machines",
+            "description": "RF cautery for skin lesion removal",
+            "icon": "cautery"
+        },
+        {
+            "id": "derma-furniture",
+            "name": "Derma Chair, Bed & Trolley",
+            "slug": "derma-furniture",
+            "description": "Premium clinic furniture and equipment",
+            "icon": "furniture"
+        },
+        {
+            "id": "accessories",
+            "name": "Accessories",
+            "slug": "accessories",
+            "description": "Derma pens, rollers, and LED devices",
+            "icon": "accessories"
+        }
+    ],
+    "products": [
+        {
+            "id": "portable-diode-laser",
+            "name": "Portable – Diode Hair Removal Machine",
+            "category": "hair-removal",
+            "tagline": "Triple Wavelength Precision",
+            "badge": "Best Seller",
+            "price": "Contact for Quote",
+            "shortDesc": "Advanced triple wavelength (755nm + 808nm + 1064nm) diode laser system for all skin types",
+            "description": "Venus Skin Care Diode Laser System uses Special Laser with long Pulse-width 808nm that can penetrate to the hair follicle. Using Selective light absorption theory, the laser can be preferentially absorbed by the melanin of the hair and then heating the hair shaft and hair follicle, destroying the follicle and oxygen organization. Special cooling technology ensures safe and comfortable treatment.",
+            "images": [
+                "placeholder1.jpg",
+                "placeholder2.jpg",
+                "placeholder3.jpg",
+                "placeholder4.jpg",
+                "placeholder5.jpg"
+            ],
+            "features": [
+                "Triple wavelength technology (755nm + 808nm + 1064nm)",
+                "Suitable for all skin types including dark skin",
+                "Special cooling system for comfort",
+                "Long-lasting results",
+                "Fast treatment sessions"
+            ],
+            "specifications": {
+                "models": [
+                    {
+                        "name": "Venus – Diode I (P)",
+                        "power": "600W",
+                        "spotSize": "15×17mm",
+                        "wavelength": "808nm + 755nm + 1064nm",
+                        "shots": "10 Million",
+                        "energy": "0~70J/cm²",
+                        "warranty": "1 Year + 1 AMC"
+                    },
+                    {
+                        "name": "Venus – Diode II (P)",
+                        "power": "800W",
+                        "spotSize": "15×17mm",
+                        "wavelength": "808nm + 755nm + 1064nm",
+                        "shots": "10 Million",
+                        "energy": "0~70J/cm²",
+                        "warranty": "1 Year + 1 AMC"
+                    },
+                    {
+                        "name": "Venus – Diode III (P)",
+                        "power": "1000W",
+                        "spotSize": "15×28mm",
+                        "wavelength": "808nm + 755nm + 1064nm",
+                        "shots": "30 Million",
+                        "energy": "0~120J/cm²",
+                        "warranty": "1 Year + 1 AMC"
+                    }
+                ],
+                "laserType": "Triple Wavelength Laser",
+                "cooling": "Distilled Water"
+            },
+            "applications": [
+                "Hair Removal (all body areas)",
+                "Fast Hair Removal sessions",
+                "Skin Rejuvenation",
+                "Effective for white/golden hair (755nm)",
+                "Standard hair removal (808nm)",
+                "Dark skin treatment (1064nm)"
+            ],
+            "technicalDetails": {
+                "705nm": "Replaces solid state alexandrite laser. Most effective for melanin absorption. Perfect for villi hair removal and shorter treatment times. Works on white or golden hair.",
+                "808nm": "Uses selective optical absorption theory. Preferentially absorbed by melanin, heating hair shaft and follicle rapidly to destroy oxygen-supply organization.",
+                "1064nm": "Specialized for darker skin types. Safer wavelength for dark skin patients with strong power and comfortable cooling function."
+            }
+        },
+        {
+            "id": "ipl-3in1",
+            "name": "IPL 3 in 1 Laser Machine",
+            "category": "multifunctional",
+            "tagline": "Multi-Treatment Solution",
+            "price": "Contact for Quote",
+            "shortDesc": "Versatile E-light system for face lifting, hair removal, and skin rejuvenation",
+            "description": "Advanced IPL 3 in 1 system combining E-light technology for non-invasive treatments including face and neck lifting, wrinkle reduction, permanent hair removal, pigmentation treatment, and vascular therapy.",
+            "images": [
+                "placeholder1.jpg",
+                "placeholder2.jpg",
+                "placeholder3.jpg",
+                "placeholder4.jpg",
+                "placeholder5.jpg"
+            ],
+            "features": [
+                "Short treatment time (20-30 minutes)",
+                "Non-invasive procedure",
+                "Painless treatment",
+                "No follow-up care required",
+                "No side effects",
+                "Stable and lasting results",
+                "High security with advanced optics"
+            ],
+            "specifications": {
+                "inputVoltage": "110-220VAC ±15%",
+                "current": "10A",
+                "outputPower": "2500W",
+                "xenonLamp": "50-100mm",
+                "filters": "480nm, 530nm, 640nm",
+                "screen": "8.0-inch color touch",
+                "cooling": "Semiconductor + Water Circulation",
+                "spotSize": "12×30mm",
+                "lampLife": "100,000 Shots",
+                "netWeight": "50kg"
+            },
+            "applications": [
+                "Face and Neck Lifting & Remodelling",
+                "Tightening flaccid facial areas",
+                "Wrinkle reduction and skin lifting",
+                "Increase collagen levels",
+                "Permanent hair removal",
+                "Pigmentation treatment (spots, freckles removal)",
+                "Skin rejuvenation",
+                "Acne treatment",
+                "Vascular therapy"
+            ]
+        },
+        {
+            "id": "alice-bubble-facial",
+            "name": "Alice Super Bubble Facial Machine",
+            "category": "hydrafacial",
+            "tagline": "7-in-1 Advanced Facial System",
+            "badge": "Popular",
+            "price": "Contact for Quote",
+            "shortDesc": "Water & oxygen jet facial machine with 7 multifunctional treatments",
+            "description": "The water & oxygen jet facial machine uses oxygen under extreme pressure and water in spray form to penetrate skin deeply. Delivers nutrients to pores and cracks from epidermis to dermis, promoting cell rebirth and clearing deep dirt. Treats blackheads, acne, wrinkles, and various skin conditions.",
+            "images": [
+                "placeholder1.jpg",
+                "placeholder2.jpg",
+                "placeholder3.jpg",
+                "placeholder4.jpg",
+                "placeholder5.jpg"
+            ],
+            "features": [
+                "Face registration with cloud storage",
+                "Comprehensive fixed-point detection (99.9% facial coverage)",
+                "Visual diagnostic reports",
+                "Private customized beauty care plans",
+                "No additives in oxygen production",
+                "ABS plastic shell - safe and reliable",
+                "Super long cumulative timing function",
+                "Thermal protection switch for safety",
+                "120s standby boot performance"
+            ],
+            "specifications": {
+                "functions": "Skin rejuvenation, wrinkle removal, facial cleaning, deep peeling, skin tightening, lifting, acne treatment",
+                "ultrasonic": "1 MHz - 3MHz",
+                "rfType": "Bipolar and Quadrupole",
+                "bottles": "Type A, B, C, D",
+                "hydroHeads": "6 hard heads + 2 polished heads",
+                "display": "10.4-inch LCD Touch screen",
+                "temperature": "0-45°C (Cold & hot hammer)",
+                "power": "<350W",
+                "pressure": "90Kpa",
+                "flow": "30L",
+                "dimensions": "110×51×40 cm",
+                "weight": "45 kg"
+            },
+            "applications": [
+                "Blackhead removal",
+                "Acne treatment",
+                "Stain and pouch removal",
+                "Hydration and moisturizing",
+                "Wrinkle reduction",
+                "Rough skin treatment",
+                "Dull skin brightening",
+                "Skin tightening and whitening"
+            ],
+            "treatments": [
+                "Hydro oxygen facial cleaning",
+                "Oxygen jet peel facial whitening",
+                "RF skin tightening",
+                "Bipolar RF for eyes",
+                "Ultrasonic with meso injection",
+                "Oxygen spray gun",
+                "Cold & hot treatment"
+            ]
+        }
+    ]
+}

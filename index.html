@@ -93,6 +93,8 @@
                     <span class="brand-venus">Venus</span>
                     <span class="brand-skincare">Skincare</span>
                 </h1>
+                <p class="hero__subtitle">A Complete Range Of Skin Care Machinery. Medical-grade aesthetic devices
+                    trusted by professionals.</p>
                 <div class="hero__ctas">
                     <a href="#machines" class="btn btn--primary btn--lg">View Machines</a>
                     <a href="#contact" class="btn btn--outline btn--lg">Request a Demo</a>
@@ -105,54 +107,578 @@
         </div>
     </section>
 
+    <!-- Company Stats Section -->
+    <section class="company-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div class="stat-card__value">8 Years</div>
+                    <div class="stat-card__label">of Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <div class="stat-card__value">68</div>
+                    <div class="stat-card__label">Staff Members</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div class="stat-card__value">750+</div>
+                    <div class="stat-card__label">Happy Clients</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Machines Section -->
     <section class="machines" id="machines">
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">Our Products</span>
                 <h2 class="section-title">Professional Skincare Machines</h2>
-                <p class="section-subtitle">Discover our range of medical-grade aesthetic devices designed for
+                <p class="section-subtitle">Discover our complete range of medical-grade aesthetic devices designed for
                     exceptional results.</p>
             </div>
 
+            <!-- Category Filter Buttons -->
             <div class="machines__filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="facial">Facial Treatments</button>
-                <button class="filter-btn" data-filter="body">Body Treatments</button>
+                <button class="filter-btn active" data-category="all">All Products</button>
+                <button class="filter-btn" data-category="hair-removal">Hair Removal</button>
+                <button class="filter-btn" data-category="hydrafacial">Hydrafacial</button>
+                <button class="filter-btn" data-category="q-switch">Q-Switch</button>
+                <button class="filter-btn" data-category="hifu">HIFU</button>
+                <button class="filter-btn" data-category="accessory">Accessories</button>
             </div>
 
-            <div class="machines__grid machines__grid--scaled">
-                <!-- Machine 1 -->
-                <a href="/machine1.html" class="machine-card machine-card--clickable" data-category="facial">
-                    <div class="machine-card__image machine-card__image--tall">
-                        <img src="/img/m1/image.png" alt="Venus Pro - Advanced Facial Treatment System" loading="lazy">
-                        <div class="machine-card__overlay">
-                            <span class="machine-card__tag">Facial</span>
+            <!-- Product Tabs Navigation -->
+            <div class="machines__tabs">
+                <button class="tab-btn active" data-tab="tab1">1</button>
+                <button class="tab-btn" data-tab="tab2">2</button>
+                <button class="tab-btn" data-tab="tab3">3</button>
+            </div>
+
+            <!-- Tab 1: Products 1-10 -->
+            <div class="tab-content active" id="tab1">
+                <div class="machines__grid">
+
+                    <!-- Product 1: Venus Diode I -->
+                    <a href="/products/venus-diode-1.html" class="machine-card" data-category="hair-removal">
+                        <div class="machine-card__image">
+                            <img src="/img/portable-diode-hair-removal-machine-01.png" alt="Venus Diode I - 600W"
+                                loading="lazy">
+                            <div class="machine-card__overlay">
+                                <span class="machine-card__tag">Hair Removal</span>
+                            </div>
                         </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">Venus Diode I - 600W</h3>
+                            <p class="machine-card__description">Triple wavelength diode laser for permanent hair
+                                removal on all skin types.</p>
+                            <span class="btn btn--secondary">View Details</span>
+                        </div>
+                    </a>
+
+                    <!-- Product 2: Venus Diode II -->
+                    <a href="/products/venus-diode-2.html" class="machine-card" data-category="hair-removal">
+                        <div class="machine-card__image">
+                            <img src="/img/portable-diode-hair-removal-machine-01.png" alt="Venus Diode II - 800W"
+                                loading="lazy">
+                            <div class="machine-card__overlay">
+                                <span class="machine-card__tag">Hair Removal</span>
+                            </div>
+                        </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">Venus Diode II - 800W</h3>
+                            <p class="machine-card__description">Enhanced 800W power for faster, more effective hair
+                                removal treatments.</p>
+                            <span class="btn btn--secondary">View Details</span>
+                        </div>
+                    </a>
+
+                    <!-- Product 3: Venus Diode III -->
+                    <a href="/products/venus-diode-3.html" class="machine-card" data-category="hair-removal">
+                        <div class="machine-card__image">
+                            <img src="/img/portable-diode-hair-removal-machine-01.png" alt="Venus Diode III - 1000W"
+                                loading="lazy">
+                            <div class="machine-card__overlay">
+                                <span class="machine-card__tag">Hair Removal</span>
+                            </div>
+                        </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">Venus Diode III - 1000W</h3>
+                            <p class="machine-card__description">Premium 1000W system with 30 million shots for
+                                high-volume clinics.</p>
+                            <span class="btn btn--secondary">View Details</span>
+                        </div>
+                    </a>
+
+                    <!-- Product 4: IPL 3 in 1 -->
+                    <a href="/products/ipl-3in1.html" class="machine-card" data-category="multifunctional">
+                        <div class="machine-card__image">
+                            <img src="/img/ipl-hair-removal-laser-machine-01.jpg" alt="IPL 3 in 1 Laser Machine"
+                                loading="lazy">
+                            <div class="machine-card__overlay">
+                                <span class="machine-card__tag">Multifunctional</span>
+                            </div>
+                        </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">IPL 3 in 1 Laser Machine</h3>
+                            <p class="machine-card__description">Versatile IPL system for hair removal, skin
+                                rejuvenation, and vascular therapy.</p>
+                            <span class="btn btn--secondary">View Details</span>
+                        </div>
+                    </a>
+
+                    <!-- Product 5: Alice Super Bubble -->
+                    <a href="/products/alice-super-bubble.html" class="machine-card" data-category="hydrafacial">
+                        <div class="machine-card__image">
+                            <img src="/img/alice-super-bubble-facial-machine-1.jpg" alt="Alice Super Bubble"
+                                loading="lazy">
+                            <div class="machine-card__overlay">
+                                <span class="machine-card__tag">Hydrafacial</span>
+                            </div>
+                        </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">Alice Super Bubble</h3>
+                            <p class="machine-card__description">7-in-1 hydro oxygen facial cleaning and whitening
+                                system.</p>
+                            <span class="btn btn--secondary">View Details</span>
+                        </div>
+                    </a>
+
+                    <!-- Product 6: 14 in 1 Hydra Beauty -->
+                    <a href="/products/hydra-beauty-14in1.html" class="machine-card" data-category="hydrafacial">
+                        <div class="machine-card__image">
+                            <img src="/img/14-in-1-hydra-beauty-skin-system-1.jpg" alt="14 in 1 Hydra Beauty"
+                                loading="lazy">
+                            <div class="machine-card__overlay">
+                                <span class="machine-card__tag">Hydrafacial</span>
+                            </div>
+                        </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">14 in 1 Hydra Beauty</h3>
+                            <p class="machine-card__description">Comprehensive beauty system with 14 advanced facial
+                                treatment handles.</p>
+                            <span class="btn btn--secondary">View Details</span>
+                        </div>
+                    </a>
+
+                    <!-- Product 7: 8 in 1 Hydrafacial -->
+                    <a href="/products/8in1-hydrafacial.html" class="machine-card" data-category="hydrafacial">
+                        <div class="machine-card__image">
+                            <img src="/img/8-in-1-hydrafacial-machine-1.png" alt="8 in 1 Hydrafacial" loading="lazy">
+                            <div class="machine-card__overlay">
+                                <span class="machine-card__tag">Hydrafacial</span>
+                            </div>
+                        </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">8 in 1 Hydrafacial</h3>
+                            <p class="machine-card__description">Deep cleansing hydrafacial with ultrasonic and RF
+                                technologies.</p>
+                            <span class="btn btn--secondary">View Details</span>
+                        </div>
+                    </a>
+
+                    <!-- Product 8: 7 in 1 H2O2 -->
+                    <a href="/products/7in1-h2o2.html" class="machine-card" data-category="hydrafacial">
+                        <div class="machine-card__image">
+                            <img src="/img/7-in-1-h2o2-machine-1.png" alt="7 in 1 H2O2" loading="lazy">
+                            <div class="machine-card__overlay">
+                                <span class="machine-card__tag">Hydrafacial</span>
+                            </div>
+                        </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">7 in 1 H2O2 Machine</h3>
+                            <p class="machine-card__description">Advanced H2O2 bubble technology for deep skin
+                                cleansing.</p>
+                            <span class="btn btn--secondary">View Details</span>
+                        </div>
+                    </a>
+
+                    <!-- Product 9: Pico Second Laser -->
+                    <a href="/products/pico-second-laser.html" class="machine-card" data-category="q-switch">
+                        <div class="machine-card__image">
+                            <img src="/img/pico-second-laser-machine-q-switch-nd-yag-laser-1.jpg"
+                                alt="Pico Second Laser" loading="lazy">
+                            <div class="machine-card__overlay">
+                                <span class="machine-card__tag">Q-Switch</span>
+                            </div>
+                        </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">Pico Second Laser</h3>
+                            <p class="machine-card__description">Advanced picosecond laser for tattoo and pigment
+                                removal.</p>
+                            <span class="btn btn--secondary">View Details</span>
+                        </div>
+                    </a>
+
+                    <!-- Product 10: Q-Switched Nd Yag -->
+                    <a href="/products/q-switched-nd-yag.html" class="machine-card" data-category="q-switch">
+                        <div class="machine-card__image">
+                            <img src="/img/q-switched-nd-yag-laser-machine-1.jpg" alt="Q-Switched Nd Yag"
+                                loading="lazy">
+                            <div class="machine-card__overlay">
+                                <span class="machine-card__tag">Q-Switch</span>
+                            </div>
+                        </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">Q-Switched Nd Yag Laser</h3>
+                            <p class="machine-card__description">Professional Q-switch laser for pigmentation and tattoo
+                                removal.</p>
+                            <span class="btn btn--secondary">View Details</span>
+                        </div>
+                    </a>
+
+                </div>
+                <!-- Bottom Tab Navigation -->
+                <div class="machines__tabs machines__tabs--bottom">
+                    <button class="tab-btn active" data-tab="tab1">1</button>
+                    <button class="tab-btn" data-tab="tab2">2</button>
+                    <button class="tab-btn" data-tab="tab3">3</button>
+                </div>
+            </div>
+
+            <!-- Tab 2: Products 11-20 -->
+            <div class="tab-content" id="tab2">
+                <div class="machines__grid">
+
+                    <!-- Product 11: CO2 Fractional -->
+                    <a href="/products/co2-fractional.html" class="machine-card" data-category="co2">
+                        <div class="machine-card__image">
+                            <img src="/img/factional-co2-laser-machines-1.png" alt="CO2 Fractional Laser"
+                                loading="lazy">
+                            <div class="machine-card__overlay">
+                                <span class="machine-card__tag">CO2 Laser</span>
+                            </div>
+                        </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">Ultrapulse Fractional CO2</h3>
+                            <p class="machine-card__description">Fractional CO2 laser for skin resurfacing and scar
+                                reduction.</p>
+                            <span class="btn btn--secondary">View Details</span>
+                        </div>
+                    </a>
+
+                    <!-- Product 12: 7D HIFU -->
+                    <a href="/products/7d-hifu.html" class="machine-card" data-category="hifu">
+                        <div class="machine-card__image">
+                            <img src="/img/7d-portable-hifu-1.jpg" alt="7D HIFU" loading="lazy">
+                            <div class="machine-card__overlay">
+                                <span class="machine-card__tag">HIFU</span>
+                            </div>
+                        </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">7D Vertical HIFU</h3>
+                            <p class="machine-card__description">Non-invasive face and body lifting with 7D HIFU
+                                technology.</p>
+                            <span class="btn btn--secondary">View Details</span>
+                        </div>
+                    </a>
+
+                    <!-- Product 13: 4D HIFU -->
+                    <a href="/products/4d-hifu.html" class="machine-card" data-category="hifu">
+                        <div class="machine-card__image">
+                            <img src="/img/7d-portable-hifu-1.jpg" alt="4D HIFU" loading="lazy">
+                            <div class="machine-card__overlay">
+                                <span class="machine-card__tag">HIFU</span>
+                            </div>
+                        </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">4D Portable HIFU</h3>
+                            <p class="machine-card__description">Portable HIFU system for anti-aging and skin
+                                tightening.</p>
+                            <span class="btn btn--secondary">View Details</span>
+                        </div>
+                    </a>
+
+                    <!-- Product 14: RF Cautery -->
+                    <a href="/products/rf-cautery.html" class="machine-card" data-category="cautery">
+                        <div class="machine-card__image">
+                            <img src="/img/rf-cautery-machine-1.jpg" alt="RF Cautery" loading="lazy">
+                            <div class="machine-card__overlay">
+                                <span class="machine-card__tag">Cautery</span>
+                            </div>
+                        </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">RF Cautery Machine</h3>
+                            <p class="machine-card__description">Radiofrequency cautery for moles, warts, and skin tag
+                                removal.</p>
+                            <span class="btn btn--secondary">View Details</span>
+                        </div>
+                    </a>
+
+                    <!-- Product 15: Derma Chair -->
+                    <a href="/products/derma-chair.html" class="machine-card" data-category="furniture">
+                        <div class="machine-card__image">
+                            <img src="/img/derma-chair-delux-model-5.png" alt="Derma Chair" loading="lazy">
+                            <div class="machine-card__overlay">
+                                <span class="machine-card__tag">Furniture</span>
+                            </div>
+                        </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">Derma Chair - Delux Model</h3>
+                            <p class="machine-card__description">Premium motorized derma chair with 150kg capacity.</p>
+                            <span class="btn btn--secondary">View Details</span>
+                        </div>
+                    </a>
+
+                    <!-- Product 16: Derma Pen A6 -->
+                    <a href="/products/derma-pen-a6.html" class="machine-card" data-category="accessory">
+                        <div class="machine-card__image">
+                            <img src="/img/dr-derma-pen-ultima-a6-1.jpg" alt="Derma Pen A6" loading="lazy">
+                            <div class="machine-card__overlay">
+                                <span class="machine-card__tag">Accessory</span>
+                            </div>
+                        </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">Dr Derma Pen - Ultima A6</h3>
+                            <p class="machine-card__description">Professional microneedling pen with 5-speed levels.</p>
+                            <span class="btn btn--secondary">View Details</span>
+                        </div>
+                    </a>
+
+                    <!-- Product 17: DRS Roller -->
+                    <a href="/products/drs-roller.html" class="machine-card" data-category="accessory">
+                        <div class="machine-card__image">
+                            <img src="/img/drs-derma-roller-1.jpg" alt="DRS Derma Roller" loading="lazy">
+                            <div class="machine-card__overlay">
+                                <span class="machine-card__tag">Accessory</span>
+                            </div>
+                        </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">DRS Derma Roller</h3>
+                            <p class="machine-card__description">540-needle derma roller for skin rejuvenation.</p>
+                            <span class="btn btn--secondary">View Details</span>
+                        </div>
+                    </a>
+
+                    <!-- Product 18: ZGTS Roller -->
+                    <a href="/products/zgts-roller.html" class="machine-card" data-category="accessory">
+                        <div class="machine-card__image">
+                            <img src="/img/zgts-derma-roller-1.jpg" alt="ZGTS Derma Roller" loading="lazy">
+                            <div class="machine-card__overlay">
+                                <span class="machine-card__tag">Accessory</span>
+                            </div>
+                        </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">ZGTS Derma Roller</h3>
+                            <p class="machine-card__description">Premium 140-needle stainless steel derma roller.</p>
+                            <span class="btn btn--secondary">View Details</span>
+                        </div>
+                    </a>
+
+                    <!-- Product 19: Omega LED -->
+                    <a href="/products/omega-led.html" class="machine-card" data-category="accessory">
+                        <div class="machine-card__image">
+                            <img src="/img/omega-led-light-1.jpg" alt="Omega LED Light" loading="lazy">
+                            <div class="machine-card__overlay">
+                                <span class="machine-card__tag">Accessory</span>
+                            </div>
+                        </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">Omega LED Light</h3>
+                            <p class="machine-card__description">4-color PDT therapy light with 287 LED pieces.</p>
+                            <span class="btn btn--secondary">View Details</span>
+                        </div>
+                    </a>
+
+                    <!-- Product 20: Hair Helmet -->
+                    <a href="/products/hair-helmet.html" class="machine-card" data-category="accessory">
+                        <div class="machine-card__image">
+                            <img src="/img/hair-regrowth-helmet-light-1.jpg" alt="Hair Regrowth Helmet" loading="lazy">
+                            <div class="machine-card__overlay">
+                                <span class="machine-card__tag">Accessory</span>
+                            </div>
+                        </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">Hair Regrowth Helmet</h3>
+                            <p class="machine-card__description">Laser helmet with 80 semiconductor diodes for hair
+                                regrowth.</p>
+                            <span class="btn btn--secondary">View Details</span>
+                        </div>
+                    </a>
+
+                </div>
+                <!-- Bottom Tab Navigation -->
+                <div class="machines__tabs machines__tabs--bottom">
+                    <button class="tab-btn" data-tab="tab1">1</button>
+                    <button class="tab-btn active" data-tab="tab2">2</button>
+                    <button class="tab-btn" data-tab="tab3">3</button>
+                </div>
+            </div>
+
+            <!-- Tab 3: Products 21-22 -->
+            <div class="tab-content" id="tab3">
+                <div class="machines__grid">
+
+                    <!-- Product 21: Skin Analyzer -->
+                    <a href="/products/skin-analyzer.html" class="machine-card" data-category="accessory">
+                        <div class="machine-card__image">
+                            <img src="/img/skin-analyzer-1.jpg" alt="Skin Analyzer" loading="lazy">
+                            <div class="machine-card__overlay">
+                                <span class="machine-card__tag">Accessory</span>
+                            </div>
+                        </div>
+                        <div class="machine-card__content">
+                            <h3 class="machine-card__title">Skin Analyzer</h3>
+                            <p class="machine-card__description">Canon 20MP skin analyzer with 3-spectrum analysis.</p>
+                            <span class="btn btn--secondary">View Details</span>
+                        </div>
+                    </a>
+
+                </div>
+                <!-- Bottom Tab Navigation -->
+                <div class="machines__tabs machines__tabs--bottom">
+                    <button class="tab-btn" data-tab="tab1">1</button>
+                    <button class="tab-btn" data-tab="tab2">2</button>
+                    <button class="tab-btn active" data-tab="tab3">3</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Product Categories Section -->
+    <section class="product-categories">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Product Range</span>
+                <h2 class="section-title">Browse by Category</h2>
+                <p class="section-subtitle">Explore our complete range of aesthetic equipment across multiple
+                    specializations</p>
+            </div>
+
+            <div class="categories-grid">
+                <a href="/categories/hair-removal-lasers.html" class="category-card">
+                    <div class="category-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
                     </div>
-                    <div class="machine-card__content">
-                        <h3 class="machine-card__title">Venus Pro</h3>
-                        <p class="machine-card__description">Advanced facial treatment system for anti-aging, skin
-                            rejuvenation, and professional skincare therapies.</p>
-                        <span class="btn btn--secondary">View Details</span>
-                    </div>
+                    <h3 class="category-card__title">Hair Removal Lasers</h3>
+                    <p class="category-card__desc">Advanced diode laser systems for permanent hair removal</p>
+                    <span class="category-card__link">View Products →</span>
                 </a>
 
-                <!-- Machine 2 -->
-                <a href="/machine2.html" class="machine-card machine-card--clickable" data-category="body">
-                    <div class="machine-card__image machine-card__image--tall">
-                        <img src="/img/m2/WhatsApp Image 2026-02-07 at 12.34.15 PM.jpeg"
-                            alt="Venus Elite - Body Contouring System" loading="lazy">
-                        <div class="machine-card__overlay">
-                            <span class="machine-card__tag">Body</span>
-                        </div>
+                <a href="/categories/multifunctional-lasers.html" class="category-card">
+                    <div class="category-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
                     </div>
-                    <div class="machine-card__content">
-                        <h3 class="machine-card__title">Venus Elite</h3>
-                        <p class="machine-card__description">Professional body contouring and skin tightening system
-                            with multi-technology capabilities.</p>
-                        <span class="btn btn--secondary">View Details</span>
+                    <h3 class="category-card__title">Multifunctional Lasers</h3>
+                    <p class="category-card__desc">Versatile IPL and laser systems for multiple treatments</p>
+                    <span class="category-card__link">View Products →</span>
+                </a>
+
+                <a href="/categories/hydra-facial.html" class="category-card">
+                    <div class="category-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
                     </div>
+                    <h3 class="category-card__title">Hydra Facial Machines</h3>
+                    <p class="category-card__desc">Deep cleansing and skin rejuvenation systems</p>
+                    <span class="category-card__link">View Products →</span>
+                </a>
+
+                <a href="/categories/q-switch-laser.html" class="category-card">
+                    <div class="category-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <circle cx="12" cy="12" r="6" />
+                            <circle cx="12" cy="12" r="2" />
+                        </svg>
+                    </div>
+                    <h3 class="category-card__title">Q Switch ND YAG / Pico</h3>
+                    <p class="category-card__desc">Precision pigment and tattoo removal lasers</p>
+                    <span class="category-card__link">View Products →</span>
+                </a>
+
+                <a href="/categories/co2-fractional.html" class="category-card">
+                    <div class="category-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                        </svg>
+                    </div>
+                    <h3 class="category-card__title">Co2 Fractional Laser</h3>
+                    <p class="category-card__desc">Skin resurfacing and wrinkle reduction</p>
+                    <span class="category-card__link">View Products →</span>
+                </a>
+
+                <a href="/categories/hifu-anti-aging.html" class="category-card">
+                    <div class="category-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="category-card__title">HIFU (Anti-Aging)</h3>
+                    <p class="category-card__desc">Non-invasive face and body lifting technology</p>
+                    <span class="category-card__link">View Products →</span>
+                </a>
+
+                <a href="/categories/cautery-machines.html" class="category-card">
+                    <div class="category-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="category-card__title">Cautery Machines</h3>
+                    <p class="category-card__desc">RF cautery for skin lesion removal</p>
+                    <span class="category-card__link">View Products →</span>
+                </a>
+
+                <a href="/categories/derma-furniture.html" class="category-card">
+                    <div class="category-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
+                        </svg>
+                    </div>
+                    <h3 class="category-card__title">Derma Chair, Bed & Trolley</h3>
+                    <p class="category-card__desc">Premium clinic furniture and equipment</p>
+                    <span class="category-card__link">View Products →</span>
+                </a>
+
+                <a href="/categories/accessories.html" class="category-card">
+                    <div class="category-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                        </svg>
+                    </div>
+                    <h3 class="category-card__title">Accessories</h3>
+                    <p class="category-card__desc">Derma pens, rollers, and LED devices</p>
+                    <span class="category-card__link">View Products →</span>
                 </a>
             </div>
         </div>
@@ -217,9 +743,36 @@
                     <p class="feature-card__text">Trusted by clinics in over 60 countries with worldwide distribution
                         network.</p>
                 </div>
+
+                <div class="feature-card">
+                    <div class="feature-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-card__title">Comprehensive Warranty</h3>
+                    <p class="feature-card__text">1 Year warranty plus 1 Year AMC included on all machines, ensuring
+                        peace of mind.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-card__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-card__title">Customizable Solutions</h3>
+                    <p class="feature-card__text">Tailored equipment packages to fit your clinic's specific needs and
+                        budget.</p>
+                </div>
             </div>
         </div>
     </section>
+
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
@@ -237,7 +790,7 @@
                                 <path
                                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
-                            <span>info@venusskincare.com</span>
+                            <span>venusskincarelaser@gmail.com</span>
                         </div>
                         <div class="contact__item">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -245,7 +798,7 @@
                                 <path
                                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                             </svg>
-                            <span>+1 (800) 555-0199</span>
+                            <span>+91 91065 45311</span>
                         </div>
                     </div>
                 </div>
@@ -324,11 +877,23 @@
                 </div>
 
                 <div class="footer__links">
-                    <h4 class="footer__title">Legal</h4>
+                    <h4 class="footer__title">Categories</h4>
                     <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Certifications</a></li>
+                        <li><a href="/categories/hair-removal-lasers.html">Hair Removal Lasers</a></li>
+                        <li><a href="/categories/multifunctional-lasers.html">Multifunctional Lasers</a></li>
+                        <li><a href="/categories/hydra-facial.html">Hydra Facial</a></li>
+                        <li><a href="/categories/q-switch-laser.html">Q Switch Laser</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__links">
+                    <h4 class="footer__title">Contact Us</h4>
+                    <ul>
+                        <li><a href="tel:+919106545311">+91 91065 45311</a></li>
+                        <li><a href="tel:+918320039331">+91 83200 39331</a></li>
+                        <li><a href="mailto:venusskincarelaser@gmail.com">venusskincarelaser@gmail.com</a></li>
+                        <li>Gota, Ahmedabad, Gujarat</li>
+                        <li>Mon - Sat: 10:00 AM - 07:00 PM</li>
                     </ul>
                 </div>
             </div>
