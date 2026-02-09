@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Venus Pro - Advanced facial treatment system for anti-aging, skin rejuvenation, and professional skincare therapies.">
+    <title>Venus Pro | Venus Skincare</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/index.css">
+    <link rel="stylesheet" href="/src/styles/machine-detail.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="/" class="header__logo">
+                <img src="/img/logo/Venus Skincare Logo_no_bg.png" alt="Venus Skincare" class="logo-img">
+                <span class="logo-text">Venus Skincare</span>
+            </a>
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li><a href="/" class="nav__link">Home</a></li>
+                    <li><a href="/#machines" class="nav__link active">Machines</a></li>
+                    <li><a href="/#about" class="nav__link">About</a></li>
+                    <li><a href="/#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <button class="btn btn--ghost">Login</button>
+                <button class="btn btn--primary">Get Started</button>
+            </div>
+            <button class="header__hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero - Simplified with Image Focus -->
+    <section class="machine-hero machine-hero--centered">
+        <div class="container">
+            <a href="/#machines" class="breadcrumb">&larr; All Machines</a>
+
+            <!-- Title & Brief Description -->
+            <div class="machine-hero__header">
+                <span class="hero__badge">Facial Treatments</span>
+                <h1 class="machine-hero__title">Venus Pro</h1>
+                <p class="machine-hero__subtitle">Advanced Facial Treatment System</p>
+            </div>
+
+            <!-- Full Width Image Carousel -->
+            <div class="machine-hero__carousel-wrapper">
+                <div class="image-carousel image-carousel--large" id="imageCarousel" data-machine="m1">
+                    <div class="carousel__track">
+                        <div class="carousel__slide active">
+                            <img src="/img/m1/image.png" alt="Venus Pro - View 1" loading="eager">
+                        </div>
+                        <div class="carousel__slide">
+                            <img src="/img/m1/image copy.png" alt="Venus Pro - View 2" loading="lazy">
+                        </div>
+                        <div class="carousel__slide">
+                            <img src="/img/m1/image copy 2.png" alt="Venus Pro - View 3" loading="lazy">
+                        </div>
+                        <div class="carousel__slide">
+                            <img src="/img/m1/image copy 3.png" alt="Venus Pro - View 4" loading="lazy">
+                        </div>
+                        <div class="carousel__slide">
+                            <img src="/img/m1/image copy 4.png" alt="Venus Pro - View 5" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="carousel__dots">
+                        <button class="carousel__dot active" data-index="0" aria-label="View image 1"></button>
+                        <button class="carousel__dot" data-index="1" aria-label="View image 2"></button>
+                        <button class="carousel__dot" data-index="2" aria-label="View image 3"></button>
+                        <button class="carousel__dot" data-index="3" aria-label="View image 4"></button>
+                        <button class="carousel__dot" data-index="4" aria-label="View image 5"></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Price -->
+            <div class="machine-hero__price">
+                <span class="price-label">Starting at</span>
+                <span class="price-value">₹5,00,000</span>
+            </div>
+
+            <!-- Description & CTAs (moved below images) -->
+            <div class="machine-hero__details">
+                <p class="machine-hero__description">The Venus Pro delivers professional-grade facial treatments
+                    with cutting-edge technology. Designed for anti-aging, skin rejuvenation, and comprehensive
+                    skincare therapies that deliver visible results.</p>
+                <div class="machine-hero__ctas">
+                    <a href="#enquiry" class="btn btn--primary btn--lg">Enquire Now</a>
+                    <a href="#demo" class="btn btn--outline btn--lg">Book a Demo</a>
+                    <a href="#" class="btn btn--ghost btn--lg">Download Brochure</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications (moved up) -->
+    <section class="machine-specs">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Technical Details</span>
+                <h2 class="section-title">Specifications</h2>
+            </div>
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <h4>Dimensions</h4>
+                    <p>45 × 40 × 110 cm</p>
+                </div>
+                <div class="spec-card">
+                    <h4>Weight</h4>
+                    <p>35 kg</p>
+                </div>
+                <div class="spec-card">
+                    <h4>Power</h4>
+                    <p>110-240V, 50/60Hz</p>
+                </div>
+                <div class="spec-card">
+                    <h4>Display</h4>
+                    <p>10.4" LCD Touchscreen</p>
+                </div>
+                <div class="spec-card">
+                    <h4>Treatment Area</h4>
+                    <p>Face, Neck, Décolleté</p>
+                </div>
+                <div class="spec-card">
+                    <h4>Warranty</h4>
+                    <p>2 Years Standard</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features (moved down) -->
+    <section class="machine-features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Key Benefits</span>
+                <h2 class="section-title">Why Choose Venus Pro</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-item__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3>Multi-Technology Platform</h3>
+                    <p>Combines multiple treatment modalities for comprehensive facial rejuvenation protocols.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-item__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3>FDA Cleared</h3>
+                    <p>Clinically proven device with FDA clearance for safe and effective treatments.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-item__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
+                        </svg>
+                    </div>
+                    <h3>Quick Treatments</h3>
+                    <p>30-minute treatment sessions with no downtime for busy clients.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-item__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <h3>Intuitive Interface</h3>
+                    <p>User-friendly touchscreen with pre-programmed treatment protocols.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications -->
+    <section class="machine-applications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Treatment Applications</span>
+                <h2 class="section-title">What Venus Pro Treats</h2>
+            </div>
+            <div class="applications-grid">
+                <div class="application-item">
+                    <span class="application-icon">✦</span>
+                    <span>Wrinkle Reduction</span>
+                </div>
+                <div class="application-item">
+                    <span class="application-icon">✦</span>
+                    <span>Skin Tightening</span>
+                </div>
+                <div class="application-item">
+                    <span class="application-icon">✦</span>
+                    <span>Collagen Stimulation</span>
+                </div>
+                <div class="application-item">
+                    <span class="application-icon">✦</span>
+                    <span>Texture Improvement</span>
+                </div>
+                <div class="application-item">
+                    <span class="application-icon">✦</span>
+                    <span>Pore Minimization</span>
+                </div>
+                <div class="application-item">
+                    <span class="application-icon">✦</span>
+                    <span>Skin Brightening</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="machine-faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">FAQ</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>What training is provided?</summary>
+                    <p>We provide comprehensive on-site training for your staff, including protocol guidance, hands-on
+                        practice, and certification upon completion. Ongoing support is available via our dedicated
+                        training portal.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What is the treatment protocol?</summary>
+                    <p>Typical treatment courses consist of 6-8 sessions, performed weekly. Each session lasts
+                        approximately 30 minutes with no downtime required.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What certifications does this device have?</summary>
+                    <p>Venus Pro is FDA cleared and CE marked. It meets ISO 13485 quality management standards and
+                        complies with all relevant medical device regulations.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What warranty is included?</summary>
+                    <p>All Venus devices come with a 2-year standard warranty covering parts and labor. Extended
+                        warranty options are available for additional coverage.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="machine-cta" id="enquiry">
+        <div class="container">
+            <div class="cta-wrapper">
+                <div class="cta-content">
+                    <h2>Ready to Transform Your Practice?</h2>
+                    <p>Contact our team to schedule a personalized demo and learn how Venus Pro can elevate your
+                        clinic's offerings.</p>
+                </div>
+                <div class="cta-actions">
+                    <a href="/#contact" class="btn btn--primary btn--lg">Enquire Now</a>
+                    <a href="#" class="btn btn--outline btn--lg">Download Brochure</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__logo-wrap">
+                        <img src="/img/logo/Venus Skincare Logo_no_bg.png" alt="Venus Skincare" class="footer__logo">
+                        <span class="footer__logo-text">Venus Skincare</span>
+                    </div>
+                    <p class="footer__description">Leading manufacturer of professional aesthetic and skincare machines.
+                    </p>
+                </div>
+                <div class="footer__links">
+                    <h4 class="footer__title">Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/#machines">Machines</a></li>
+                        <li><a href="/#about">About</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__links">
+                    <h4 class="footer__title">Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Venus Skincare. All rights reserved.</p>
+                <div class="footer__certifications">
+                    <span class="cert-badge">FDA Cleared</span>
+                    <span class="cert-badge">CE Marked</span>
+                    <span class="cert-badge">ISO 13485</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/machine-detail.js"></script>
+</body>
+
+</html>
