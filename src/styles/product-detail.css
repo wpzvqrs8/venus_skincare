@@ -463,3 +463,119 @@ ul.features-list li:hover {
     padding-left: 20px;
     /* Subtle movement */
 }
+
+/* =========================================
+   New Redesign Styles (Added for visual upgrade)
+   ========================================= */
+
+/* Benefits Grid (Why This Machine) */
+.product-benefits {
+    padding: 80px 0;
+    background: var(--color-dark);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    margin-top: 50px;
+}
+
+.benefit-card {
+    background: var(--color-dark-lighter);
+    padding: 32px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(201, 169, 98, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    color: var(--color-accent);
+}
+
+.benefit-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: var(--color-text-primary);
+}
+
+.benefit-card p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* Enhanced Functions Section */
+.functions-section {
+    margin-top: 60px;
+}
+
+.functions-section h3 {
+    font-size: 28px;
+    margin-bottom: 32px;
+    text-align: center;
+    color: var(--color-primary);
+}
+
+.functions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.function-item {
+    display: flex;
+    gap: 20px;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.function-item:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(201, 169, 98, 0.2);
+}
+
+.function-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgba(201, 169, 98, 0.3);
+    font-family: 'Playfair Display', serif;
+    min-width: 40px;
+}
+
+.function-content h4 {
+    font-size: 18px;
+    color: var(--color-text-primary);
+    margin-bottom: 8px;
+}
+
+.function-content p {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .functions-grid {
+        grid-template-columns: 1fr;
+    }
+}

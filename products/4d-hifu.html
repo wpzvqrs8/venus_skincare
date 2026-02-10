@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4D HIFU Machine | Venus Skincare</title>
+    <title>4D Portable HIFU | Venus Skincare</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/src/styles/index.css">
     <link rel="stylesheet" href="/src/styles/product-detail.css">
@@ -18,19 +18,33 @@
     <header class="header" id="header">
         <div class="container header__inner">
             <a href="/" class="header__logo"><img src="/img/logo/Venus Skincare Logo_no_bg.png" alt="Venus Skincare"
-                    class="logo-img"><span class="logo-text">Venus Skincare</span></a>
+                    class="logo-img"><span class="logo-text"
+                    style="color: white; font-family: 'Playfair Display', serif;">Venus Skincare</span></a>
             <nav class="header__nav" id="nav">
                 <ul class="nav__list">
-                    <li><a href="/" class="nav__link">Home</a></li>
-                    <li><a href="/#machines" class="nav__link">Products</a></li>
-                    <li><a href="/#about" class="nav__link">About</a></li>
-                    <li><a href="/#contact" class="nav__link">Contact</a></li>
+                    <li><a href="/" class="nav__link" style="color: rgba(255,255,255,0.8)">Home</a></li>
+                    <li><a href="/#machines" class="nav__link" style="color: rgba(255,255,255,0.8)">Products</a></li>
+                    <li><a href="/#about" class="nav__link" style="color: rgba(255,255,255,0.8)">About</a></li>
+                    <li><a href="/#contact" class="nav__link" style="color: rgba(255,255,255,0.8)">Contact</a></li>
                 </ul>
             </nav>
-            <div class="header__actions"><a href="/#contact" class="btn btn--primary">Get a Quote</a></div>
-            <button class="header__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+            <div class="header__actions"><a href="/#contact" class="btn btn--primary"
+                    style="background: var(--gradient-gold); color: black; border: none;">Get a Quote</a></div>
+            <button class="header__hamburger" id="hamburger"
+                style="filter: invert(1);"><span></span><span></span><span></span></button>
         </div>
     </header>
+    <style>
+        .header {
+            background: rgba(11, 17, 32, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+    </style>
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu__overlay"></div>
         <div class="mobile-menu__content"><button class="mobile-menu__close" id="closeMenu">&times;</button>
@@ -40,127 +54,145 @@
         </div>
     </div>
 
-    <!-- Product Hero Section -->
     <section class="product-hero">
         <div class="container">
-            <nav class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/#machines">Products</a><span>/</span><a
-                    href="/categories/hifu.html">HIFU</a><span>/</span><span>4D HIFU</span></nav>
-
-            <div class="product-hero__grid">
-                <div class="product-hero__image">
-                    <div class="product-badge">Multi-Line</div>
-                    <img src="/img/7d-portable-hifu-1.jpg" alt="4D HIFU Machine" class="product-image">
-                </div>
-                <div class="product-hero__info">
-                    <h1 class="product-hero__title">4D HIFU Machine</h1>
-                    <p class="product-hero__tagline">Advanced Multi-Line Lifting</p>
-                    <p class="product-hero__description">Revolutionary 4D technology capable of firing up to 12 lines
-                        per shot. Covers larger treatment areas faster and more evenly than traditional single-line
-                        HIFU.</p>
-                    <div class="product-hero__features">
-                        <div class="feature-highlight">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            <span>12 Lines/Shot</span>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="hero-badge">Compact & Powerful</span>
+                    <h1 class="hero-title">4D Portable HIFU</h1>
+                    <p class="hero-tagline">Mobile Anti-Aging Solution</p>
+                    <p class="hero-description">Compact yet powerful 4D HIFU technology in a portable design. Perfect
+                        for mobile clinics or space-constrained treatment rooms while delivering professional-grade
+                        anti-aging results.</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">4D</span>
+                            <span class="stat-label">Technology</span>
                         </div>
-                        <div class="feature-highlight">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            <span>360° V-Max</span>
+                        <div class="stat-item">
+                            <span class="stat-value">Portable</span>
+                            <span class="stat-label">Design</span>
                         </div>
-                        <div class="feature-highlight">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            <span>Vaginal Head</span>
-                        </div>
-                        <div class="feature-highlight">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            <span>1 Year Warranty + AMC</span>
+                        <div class="stat-item">
+                            <span class="stat-value">1 yr</span>
+                            <span class="stat-label">Warranty</span>
                         </div>
                     </div>
-                    <div class="product-hero__cta">
-                        <a href="/#contact" class="btn btn--primary btn--lg">Get a Quote</a>
-                        <a href="tel:+919106545311" class="btn btn--outline btn--lg">Call: +91 91065 45311</a>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn-gold">Get Best Price</a>
+                        <a href="#specs" class="btn-glass">View Specs</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img src="/img/4d-portable-hifu-machine-1.png" alt="4D Portable HIFU" class="hero-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-benefits">
+        <div class="container">
+            <div class="section-header-center">
+                <span class="section-subtitle">Why Choose This?</span>
+                <h2 class="section-title-dark">Powerful Yet <br><em>Portable</em></h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 2.69l5.74 3.32v6.63l-5.74 3.32-5.74-3.32V6.01l5.74-3.32z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Space-Saving Design</h3>
+                    <p class="benefit-desc">Compact footprint ideal for small clinics or mobile services.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Full HIFU Power</h3>
+                    <p class="benefit-desc">Same anti-aging results as larger systems in a portable package.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Cost-Effective</h3>
+                    <p class="benefit-desc">Premium HIFU technology at an affordable price point.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-functions">
+        <div class="container">
+            <div class="section-header-center">
+                <span class="section-subtitle">Treatment Applications</span>
+                <h2 class="section-title-dark">4D HIFU Applications</h2>
+            </div>
+            <div class="functions-container">
+                <div class="function-item"><span class="function-number">01</span>
+                    <div class="function-content">
+                        <h4>Face Lifting</h4>
+                        <p>Non-surgical facelift and contouring.</p>
+                    </div>
+                </div>
+                <div class="function-item"><span class="function-number">02</span>
+                    <div class="function-content">
+                        <h4>Wrinkle Reduction</h4>
+                        <p>Smoothes forehead lines and crow's feet.</p>
+                    </div>
+                </div>
+                <div class="function-item"><span class="function-number">03</span>
+                    <div class="function-content">
+                        <h4>Skin Tightening</h4>
+                        <p>Firms sagging skin on face and neck.</p>
+                    </div>
+                </div>
+                <div class="function-item"><span class="function-number">04</span>
+                    <div class="function-content">
+                        <h4>Double Chin</h4>
+                        <p>Reduces submental fat and tightens.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Product Description -->
-    <div class="product-description">
-        <h2>4D HIFU Machine</h2>
-        <p>4D HIFU is an ultrasound energy distance of width, length and depth, which more Comprehensive,
-            three-dimensional. Directly delivers heat energy to skin and subcutaneous tissue that can stimulate and
-            renew the skin's collagen and thus consequently improving the texture and reducing sagging of the skin.</p>
-
-        <h3>Functions:</h3>
-        <ul class="features-list">
-            <li>1. Facial lifting, tightening and body contouring system.</li>
-            <li>2. Non-surgical treatment.</li>
-            <li>3. 3 probes cartridges for face and body.</li>
-        </ul>
-
-        <h3>Advantage:</h3>
-        <ul class="features-list">
-            <li>1. Non-surgical treatment of facial lifting, tightening and body contouring system.</li>
-            <li>2. The world's latest HIFU high energy focused ultrasound technology.</li>
-            <li>3. Non-invasive, safe, fast, comfortable and effective.</li>
-            <li>4. 1.5mm, 3.0mm, 4.5mm cartridges for face lifting.</li>
-        </ul>
-    </div>
-
-    <!-- Technical Specifications -->
-    <section class="product-specs">
+    <section class="section-specs" id="specs">
         <div class="container">
-            <h2 class="section-title">Technical Specifications</h2>
-            <div class="table-responsive">
+            <div class="section-header-center">
+                <h2 class="section-title-dark">Technical Specifications</h2>
+            </div>
+            <div class="specs-wrapper">
                 <table class="specs-table">
                     <tbody>
                         <tr>
-                            <th>Lines</th>
-                            <td>12 lines</td>
+                            <th>Technology</th>
+                            <td>4D HIFU</td>
                         </tr>
                         <tr>
-                            <th>Standard Cartridge</th>
+                            <th>Cartridges</th>
                             <td>1.5mm, 3.0mm, 4.5mm</td>
                         </tr>
                         <tr>
-                            <th>Optional Cartridge</th>
-                            <td>6.0mm, 8.0mm, 10.0mm, 13.0mm, 16.0mm</td>
+                            <th>Power</th>
+                            <td>150W</td>
                         </tr>
                         <tr>
-                            <th>Points</th>
-                            <td>20000 shots</td>
+                            <th>Design</th>
+                            <td>Portable & Lightweight</td>
                         </tr>
                         <tr>
-                            <th>Energy</th>
-                            <td>0.1-2.0J</td>
-                        </tr>
-                        <tr>
-                            <th>Screen</th>
-                            <td>15 inch color touch screen</td>
-                        </tr>
-                        <tr>
-                            <th>Voltage</th>
-                            <td>110V-240V 50Hz/60Hz</td>
-                        </tr>
-                        <tr>
-                            <th>Packing Size</th>
-                            <td>18*36*52cm</td>
+                            <th>Weight</th>
+                            <td>8 KG</td>
                         </tr>
                     </tbody>
                 </table>
@@ -168,14 +200,13 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="product-cta">
+    <section class="product-hero" style="padding: 80px 0; text-align: center;">
         <div class="container">
-            <h2>Ready to Add This Machine to Your Clinic?</h2>
-            <p>Contact our experts for pricing, demonstrations, and customized clinic solutions.</p>
-            <div class="cta-buttons">
-                <a href="/#contact" class="btn btn--primary btn--lg">Request Quote</a>
-                <a href="tel:+919106545311" class="btn btn--outline btn--lg">Call: +91 91065 45311</a>
+            <span class="hero-tagline" style="display: block; margin-bottom: 20px;">Perfect for Mobile Clinics</span>
+            <h2 class="hero-title" style="font-size: 3rem; margin-bottom: 30px;">Get The Best Price Today</h2>
+            <div class="hero-actions" style="justify-content: center;">
+                <a href="#contact" class="btn-gold">Request Quote</a>
+                <a href="tel:+919106545311" class="btn-glass">Call Us Now</a>
             </div>
         </div>
     </section>
@@ -187,42 +218,16 @@
                     <div class="footer__logo-wrap"><img src="/img/logo/Venus Skincare Logo_no_bg.png"
                             alt="Venus Skincare" class="footer__logo"><span class="footer__logo-text">Venus
                             Skincare</span></div>
-                    <p class="footer__description">A Complete Range Of Skin Care Machinery. Trusted by clinics worldwide
-                        for medical-grade quality and results.</p>
                 </div>
                 <div class="footer__links">
-                    <h4 class="footer__title">Quick Links</h4>
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/#machines">Products</a></li>
-                        <li><a href="/#about">About Us</a></li>
-                        <li><a href="/#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer__links">
-                    <h4 class="footer__title">Categories</h4>
-                    <ul>
-                        <li><a href="/categories/hair-removal-lasers.html">Hair Removal Lasers</a></li>
-                        <li><a href="/categories/multifunctional-lasers.html">Multifunctional Lasers</a></li>
-                        <li><a href="/categories/hydra-facial.html">Hydra Facial</a></li>
-                        <li><a href="/categories/q-switch-laser.html">Q Switch Laser</a></li>
-                    </ul>
-                </div>
-                <div class="footer__links">
-                    <h4 class="footer__title">Contact Us</h4>
+                    <h4 class="footer__title">Contact</h4>
                     <ul>
                         <li><a href="tel:+919106545311">+91 91065 45311</a></li>
-                        <li><a href="tel:+918320039331">+91 83200 39331</a></li>
-                        <li><a href="mailto:venusskincarelaser@gmail.com">venusskincarelaser@gmail.com</a></li>
-                        <li>Gota, Ahmedabad, Gujarat</li>
-                        <li>Mon - Sat: 10:00 AM - 07:00 PM</li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
-                <p>&copy; 2026 Venus Skincare. All rights reserved.</p>
-                <div class="footer__certifications"><span class="cert-badge">Medical Grade</span><span
-                        class="cert-badge">ISO Certified</span><span class="cert-badge">8 Years Experience</span></div>
+                <p>&copy; 2026 Venus Skincare.</p>
             </div>
         </div>
     </footer>

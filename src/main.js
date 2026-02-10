@@ -357,33 +357,86 @@ elements.mobileLogoutBtn?.addEventListener('click', () => {
 });
 
 // ==================== FILTER FUNCTIONALITY ====================
+// ==================== FILTER FUNCTIONALITY ====================
 elements.filterBtns?.forEach(btn => {
     btn.addEventListener('click', () => {
         // Update active state
         elements.filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
-        const filter = btn.dataset.filter;
+        const category = btn.getAttribute('data-category');
+        const allTabNavs = document.querySelectorAll('.machines__tabs');
+        const tabContents = document.querySelectorAll('.tab-content');
+        const allTabBtns = document.querySelectorAll('.tab-btn');
 
-        elements.machineCards?.forEach(card => {
-            if (filter === 'all' || card.dataset.category === filter) {
-                gsap.to(card, {
-                    opacity: 1,
-                    scale: 1,
-                    duration: 0.4,
-                    ease: 'power2.out'
-                });
+        if (category === 'all') {
+            // mode: VIEW TABS (default)
+
+            // Show Tab Navigation
+            allTabNavs.forEach(nav => nav.style.display = '');
+
+            // Reset to Tab 1
+            tabContents.forEach(content => {
+                content.style.display = ''; // clear override
+                content.classList.remove('active');
+                if (content.id === 'tab1') content.classList.add('active');
+            });
+
+            // Reset Tab Buttons
+            allTabBtns.forEach(tBtn => {
+                tBtn.classList.remove('active');
+                if (tBtn.getAttribute('data-tab') === 'tab1') tBtn.classList.add('active');
+            });
+
+            // Show all cards (visibility handled by tab parents)
+            elements.machineCards?.forEach(card => {
                 card.style.display = '';
-            } else {
-                gsap.to(card, {
-                    opacity: 0,
-                    scale: 0.95,
-                    duration: 0.3,
-                    ease: 'power2.in',
-                    onComplete: () => { card.style.display = 'none'; }
-                });
-            }
-        });
+                card.style.opacity = '';
+                card.style.transform = '';
+            });
+
+        } else {
+            // mode: FILTER (ignore tabs)
+
+            // Hide Tab Navigation
+            allTabNavs.forEach(nav => nav.style.display = 'none');
+
+            // Force show all tab containers so we can see products inside them
+            tabContents.forEach(content => {
+                content.classList.add('active');
+                content.style.display = 'block';
+            });
+
+            // Filter individual cards
+            elements.machineCards?.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+
+                // Flexible matching: exact match OR check if it's a "mapped" category
+                // For example, 'accessory' filter should show 'furniture' too? 
+                // For now, simple exact match as per previous logic, but ensure 'multifunctional' handling if needed.
+                // User requirement was: "when any of the 6 is touched".
+
+                let isMatch = (cardCategory === category);
+
+                if (isMatch) {
+                    card.style.display = 'block';
+                    gsap.to(card, {
+                        opacity: 1,
+                        scale: 1,
+                        duration: 0.4,
+                        ease: 'power2.out'
+                    });
+                } else {
+                    gsap.to(card, {
+                        opacity: 0,
+                        scale: 0.95,
+                        duration: 0.3,
+                        ease: 'power2.in',
+                        onComplete: () => { card.style.display = 'none'; }
+                    });
+                }
+            });
+        }
     });
 });
 

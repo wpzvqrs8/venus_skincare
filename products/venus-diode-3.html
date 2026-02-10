@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venus Diode III - 1000W | Venus Skincare</title>
+    <title>Venus Diode Laser 3 | Venus Skincare</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/src/styles/index.css">
     <link rel="stylesheet" href="/src/styles/product-detail.css">
@@ -18,19 +18,33 @@
     <header class="header" id="header">
         <div class="container header__inner">
             <a href="/" class="header__logo"><img src="/img/logo/Venus Skincare Logo_no_bg.png" alt="Venus Skincare"
-                    class="logo-img"><span class="logo-text">Venus Skincare</span></a>
+                    class="logo-img"><span class="logo-text"
+                    style="color: white; font-family: 'Playfair Display', serif;">Venus Skincare</span></a>
             <nav class="header__nav" id="nav">
                 <ul class="nav__list">
-                    <li><a href="/" class="nav__link">Home</a></li>
-                    <li><a href="/#machines" class="nav__link">Products</a></li>
-                    <li><a href="/#about" class="nav__link">About</a></li>
-                    <li><a href="/#contact" class="nav__link">Contact</a></li>
+                    <li><a href="/" class="nav__link" style="color: rgba(255,255,255,0.8)">Home</a></li>
+                    <li><a href="/#machines" class="nav__link" style="color: rgba(255,255,255,0.8)">Products</a></li>
+                    <li><a href="/#about" class="nav__link" style="color: rgba(255,255,255,0.8)">About</a></li>
+                    <li><a href="/#contact" class="nav__link" style="color: rgba(255,255,255,0.8)">Contact</a></li>
                 </ul>
             </nav>
-            <div class="header__actions"><a href="/#contact" class="btn btn--primary">Get a Quote</a></div>
-            <button class="header__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+            <div class="header__actions"><a href="/#contact" class="btn btn--primary"
+                    style="background: var(--gradient-gold); color: black; border: none;">Get a Quote</a></div>
+            <button class="header__hamburger" id="hamburger"
+                style="filter: invert(1);"><span></span><span></span><span></span></button>
         </div>
     </header>
+    <style>
+        .header {
+            background: rgba(11, 17, 32, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+    </style>
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu__overlay"></div>
         <div class="mobile-menu__content"><button class="mobile-menu__close" id="closeMenu">&times;</button>
@@ -40,182 +54,156 @@
         </div>
     </div>
 
-    <!-- Product Hero Section -->
     <section class="product-hero">
         <div class="container">
-            <nav class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/#machines">Products</a><span>/</span><a
-                    href="/categories/hair-removal-lasers.html">Hair Removal Lasers</a><span>/</span><span>Venus Diode
-                    III</span></nav>
-
-            <div class="product-hero__grid">
-                <div class="product-hero__image">
-                    <div class="product-badge">Top Performance</div>
-                    <img src="/img/portable-diode-hair-removal-machine-01.png" alt="Venus Diode III - 1000W"
-                        class="product-image">
-                </div>
-                <div class="product-hero__info">
-                    <h1 class="product-hero__title">Venus Diode III - 1000W</h1>
-                    <p class="product-hero__tagline">Maximum Power Diode Laser System</p>
-                    <p class="product-hero__description">Our most powerful diode laser system delivering 1000W of
-                        output. Featuring precision triple wavelength technology (808nm + 755nm + 1064nm) for the
-                        fastest and most effective hair removal on all skin types.</p>
-                    <div class="product-hero__features">
-                        <div class="feature-highlight">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            <span>1000W Max Power</span>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="hero-badge">Premium Model</span>
+                    <h1 class="hero-title">Venus Diode Laser (Model 3)</h1>
+                    <p class="hero-tagline">Triple-Handle Professional System</p>
+                    <p class="hero-description">Top-tier diode laser featuring three interchangeable handles for maximum
+                        versatility. Ideal for high-volume clinics demanding speed and precision.</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">3</span>
+                            <span class="stat-label">Handpieces</span>
                         </div>
-                        <div class="feature-highlight">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            <span>Triple Wavelength</span>
+                        <div class="stat-item">
+                            <span class="stat-value">808nm</span>
+                            <span class="stat-label">Wavelength</span>
                         </div>
-                        <div class="feature-highlight">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            <span>30 Million Shots</span>
-                        </div>
-                        <div class="feature-highlight">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            <span>1 Year Warranty + AMC</span>
+                        <div class="stat-item">
+                            <span class="stat-value">1 yr</span>
+                            <span class="stat-label">Warranty</span>
                         </div>
                     </div>
-                    <div class="product-hero__cta">
-                        <a href="/#contact" class="btn btn--primary btn--lg">Get a Quote</a>
-                        <a href="tel:+919106545311" class="btn btn--outline btn--lg">Call: +91 91065 45311</a>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn-gold">Get Best Price</a>
+                        <a href="#specs" class="btn-glass">View Specs</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img src="/img/venus-diode-laser-3.jpg" alt="Venus Diode Laser 3" class="hero-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-benefits">
+        <div class="container">
+            <div class="section-header-center">
+                <span class="section-subtitle">Premium Features</span>
+                <h2 class="section-title-dark">Multi-Handle <br><em>Versatility</em></h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 2.69l5.74 3.32v6.63l-5.74 3.32-5.74-3.32V6.01l5.74-3.32z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">3 Handpieces</h3>
+                    <p class="benefit-desc">Large, medium, and precision handpieces for all body areas.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Maximum Efficiency</h3>
+                    <p class="benefit-desc">Switch handles for optimal treatment speed on each area.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">High-Volume Ready</h3>
+                    <p class="benefit-desc">Built for busy clinics with continuous operation capability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-functions">
+        <div class="container">
+            <div class="section-header-center">
+                <span class="section-subtitle">Handpieces</span>
+                <h2 class="section-title-dark">3 Professional Handles</h2>
+            </div>
+            <div class="functions-container">
+                <div class="function-item"><span class="function-number">01</span>
+                    <div class="function-content">
+                        <h4>Large Spot (12x24mm)</h4>
+                        <p>For back, legs, large body areas.</p>
+                    </div>
+                </div>
+                <div class="function-item"><span class="function-number">02</span>
+                    <div class="function-content">
+                        <h4>Medium Spot (12x12mm)</h4>
+                        <p>For arms, chest, abdomen.</p>
+                    </div>
+                </div>
+                <div class="function-item"><span class="function-number">03</span>
+                    <div class="function-content">
+                        <h4>Precision Spot (8x8mm)</h4>
+                        <p>For face, bikini, delicate areas.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-
-    <!-- Key Features & Applications -->
-    <section class="product-features">
+    <section class="section-specs" id="specs">
         <div class="container">
-            <div class="features-grid">
-                <div class="features-column">
-                    <h2 class="section-title">Key Features</h2>
-                    <ul class="features-list">
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span><strong>Maximum Power:</strong> 1000W output for the most stubborn hair</span>
-                        </li>
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span><strong>Advanced Cooling:</strong> Sapphire contact cooling for painless
-                                treatments</span>
-                        </li>
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span><strong>Maximum Durability:</strong> 30 million laser shots</span>
-                        </li>
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span><strong>Fastest Treatment:</strong> Biggest spot size for full body sessions in
-                                minutes</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="features-column">
-                    <h2 class="section-title">Applications</h2>
-                    <ul class="features-list">
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span>High-speed permanent hair removal</span>
-                        </li>
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span>Effective on all skin types (I-VI)</span>
-                        </li>
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span>Skin rejuvenation and tightening</span>
-                        </li>
-                    </ul>
-                </div>
+            <div class="section-header-center">
+                <h2 class="section-title-dark">Technical Specifications</h2>
+            </div>
+            <div class="specs-wrapper">
+                <table class="specs-table">
+                    <tbody>
+                        <tr>
+                            <th>Technology</th>
+                            <td>808nm Diode Laser</td>
+                        </tr>
+                        <tr>
+                            <th>Handpieces</th>
+                            <td>3 (Large, Medium, Precision)</td>
+                        </tr>
+                        <tr>
+                            <th>Power</th>
+                            <td>1000W</td>
+                        </tr>
+                        <tr>
+                            <th>Cooling</th>
+                            <td>Quad Cooling System</td>
+                        </tr>
+                        <tr>
+                            <th>Frequency</th>
+                            <td>1-10 Hz</td>
+                        </tr>
+                        <tr>
+                            <th>Weight</th>
+                            <td>50 KG</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
 
-    <!-- Wavelength Technology -->
-    <section class="wavelength-tech">
+    <section class="product-hero" style="padding: 80px 0; text-align: center;">
         <div class="container">
-            <h2 class="section-title">Triple Wavelength Technology</h2>
-            <p class="section-subtitle">Advanced multi-wavelength system for superior results across all skin types and
-                hair colors</p>
-            <div class="wavelength-grid">
-                <div class="wavelength-card">
-                    <div class="wavelength-card__header">
-                        <div class="wavelength-badge">755nm</div>
-                        <h3>Alexandrite Laser</h3>
-                    </div>
-                    <p>Specialized for light hair colors including white, golden, and blonde hair. Most effective for
-                        melanin absorption in villi hair.</p>
-                </div>
-                <div class="wavelength-card">
-                    <div class="wavelength-card__header">
-                        <div class="wavelength-badge">808nm</div>
-                        <h3>Diode Laser</h3>
-                    </div>
-                    <p>Standard wavelength for hair removal. Selective optical absorption by melanin, effectively
-                        destroys the oxygen-supply organization of hair follicles.</p>
-                </div>
-                <div class="wavelength-card">
-                    <div class="wavelength-card__header">
-                        <div class="wavelength-badge">1064nm</div>
-                        <h3>Long Pulse Nd:YAG</h3>
-                    </div>
-                    <p>Specialized for darker skin types. Safer penetration depth making it ideal for dark skin patients
-                        without risk of pigmentation.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="product-cta">
-        <div class="container">
-            <h2>Ready to Add This Machine to Your Clinic?</h2>
-            <p>Contact our experts for pricing, demonstrations, and customized clinic solutions.</p>
-            <div class="cta-buttons">
-                <a href="/#contact" class="btn btn--primary btn--lg">Request Quote</a>
-                <a href="tel:+919106545311" class="btn btn--outline btn--lg">Call: +91 91065 45311</a>
+            <span class="hero-tagline" style="display: block; margin-bottom: 20px;">Premier Hair Removal System</span>
+            <h2 class="hero-title" style="font-size: 3rem; margin-bottom: 30px;">Get The Best Price Today</h2>
+            <div class="hero-actions" style="justify-content: center;">
+                <a href="#contact" class="btn-gold">Request Quote</a>
+                <a href="tel:+919106545311" class="btn-glass">Call Us Now</a>
             </div>
         </div>
     </section>
@@ -227,42 +215,16 @@
                     <div class="footer__logo-wrap"><img src="/img/logo/Venus Skincare Logo_no_bg.png"
                             alt="Venus Skincare" class="footer__logo"><span class="footer__logo-text">Venus
                             Skincare</span></div>
-                    <p class="footer__description">A Complete Range Of Skin Care Machinery. Trusted by clinics worldwide
-                        for medical-grade quality and results.</p>
                 </div>
                 <div class="footer__links">
-                    <h4 class="footer__title">Quick Links</h4>
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/#machines">Products</a></li>
-                        <li><a href="/#about">About Us</a></li>
-                        <li><a href="/#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer__links">
-                    <h4 class="footer__title">Categories</h4>
-                    <ul>
-                        <li><a href="/categories/hair-removal-lasers.html">Hair Removal Lasers</a></li>
-                        <li><a href="/categories/multifunctional-lasers.html">Multifunctional Lasers</a></li>
-                        <li><a href="/categories/hydra-facial.html">Hydra Facial</a></li>
-                        <li><a href="/categories/q-switch-laser.html">Q Switch Laser</a></li>
-                    </ul>
-                </div>
-                <div class="footer__links">
-                    <h4 class="footer__title">Contact Us</h4>
+                    <h4 class="footer__title">Contact</h4>
                     <ul>
                         <li><a href="tel:+919106545311">+91 91065 45311</a></li>
-                        <li><a href="tel:+918320039331">+91 83200 39331</a></li>
-                        <li><a href="mailto:venusskincarelaser@gmail.com">venusskincarelaser@gmail.com</a></li>
-                        <li>Gota, Ahmedabad, Gujarat</li>
-                        <li>Mon - Sat: 10:00 AM - 07:00 PM</li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
-                <p>&copy; 2026 Venus Skincare. All rights reserved.</p>
-                <div class="footer__certifications"><span class="cert-badge">Medical Grade</span><span
-                        class="cert-badge">ISO Certified</span><span class="cert-badge">8 Years Experience</span></div>
+                <p>&copy; 2026 Venus Skincare.</p>
             </div>
         </div>
     </footer>

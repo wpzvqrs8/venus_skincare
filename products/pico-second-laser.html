@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pico Second Laser Machine | Venus Skincare</title>
+    <title>Pico Second Laser | Venus Skincare</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/src/styles/index.css">
     <link rel="stylesheet" href="/src/styles/product-detail.css">
@@ -18,19 +18,33 @@
     <header class="header" id="header">
         <div class="container header__inner">
             <a href="/" class="header__logo"><img src="/img/logo/Venus Skincare Logo_no_bg.png" alt="Venus Skincare"
-                    class="logo-img"><span class="logo-text">Venus Skincare</span></a>
+                    class="logo-img"><span class="logo-text"
+                    style="color: white; font-family: 'Playfair Display', serif;">Venus Skincare</span></a>
             <nav class="header__nav" id="nav">
                 <ul class="nav__list">
-                    <li><a href="/" class="nav__link">Home</a></li>
-                    <li><a href="/#machines" class="nav__link">Products</a></li>
-                    <li><a href="/#about" class="nav__link">About</a></li>
-                    <li><a href="/#contact" class="nav__link">Contact</a></li>
+                    <li><a href="/" class="nav__link" style="color: rgba(255,255,255,0.8)">Home</a></li>
+                    <li><a href="/#machines" class="nav__link" style="color: rgba(255,255,255,0.8)">Products</a></li>
+                    <li><a href="/#about" class="nav__link" style="color: rgba(255,255,255,0.8)">About</a></li>
+                    <li><a href="/#contact" class="nav__link" style="color: rgba(255,255,255,0.8)">Contact</a></li>
                 </ul>
             </nav>
-            <div class="header__actions"><a href="/#contact" class="btn btn--primary">Get a Quote</a></div>
-            <button class="header__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+            <div class="header__actions"><a href="/#contact" class="btn btn--primary"
+                    style="background: var(--gradient-gold); color: black; border: none;">Get a Quote</a></div>
+            <button class="header__hamburger" id="hamburger"
+                style="filter: invert(1);"><span></span><span></span><span></span></button>
         </div>
     </header>
+    <style>
+        .header {
+            background: rgba(11, 17, 32, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+    </style>
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu__overlay"></div>
         <div class="mobile-menu__content"><button class="mobile-menu__close" id="closeMenu">&times;</button>
@@ -40,139 +54,162 @@
         </div>
     </div>
 
-    <!-- Product Hero Section -->
     <section class="product-hero">
         <div class="container">
-            <nav class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/#machines">Products</a><span>/</span><a
-                    href="/categories/q-switch-laser.html">Q-Switch & Pico Lasers</a><span>/</span><span>Pico Second
-                    Laser</span></nav>
-
-            <div class="product-hero__grid">
-                <div class="product-hero__image">
-                    <div class="product-badge">Advanced Tech</div>
-                    <img src="/img/pico-second-laser-machine-q-switch-nd-yag-laser-1.jpg"
-                        alt="Pico Second Laser Machine" class="product-image">
-                </div>
-                <div class="product-hero__info">
-                    <h1 class="product-hero__title">Pico Second Laser Machine</h1>
-                    <p class="product-hero__tagline">The Fastest & Most Powerful Tattoo Removal</p>
-                    <p class="product-hero__description">Revolutionary picosecond technology delivers ultra-short pulses
-                        of energy to shatter ink particles into dust. Faster, safer, and more effective than traditional
-                        Q-switch lasers.</p>
-                    <div class="product-hero__features">
-                        <div class="feature-highlight">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            <span>Pico Technology</span>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="hero-badge">Advanced Laser Technology</span>
+                    <h1 class="hero-title">Pico Second Laser</h1>
+                    <p class="hero-tagline">Ultra-Fast Pigment Removal</p>
+                    <p class="hero-description">Revolutionary picosecond laser technology for superior tattoo removal,
+                        pigmentation treatment, and skin rejuvenation. 450 picoseconds pulse duration shatters pigment
+                        with minimal heat damage.</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">450ps</span>
+                            <span class="stat-label">Pulse Duration</span>
                         </div>
-                        <div class="feature-highlight">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            <span>Carbon Peel</span>
+                        <div class="stat-item">
+                            <span class="stat-value">755nm</span>
+                            <span class="stat-label">Wavelength</span>
                         </div>
-                        <div class="feature-highlight">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            <span>4 Wavelengths</span>
-                        </div>
-                        <div class="feature-highlight">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            <span>1 Year Warranty + AMC</span>
+                        <div class="stat-item">
+                            <span class="stat-value">1 yr</span>
+                            <span class="stat-label">Warranty</span>
                         </div>
                     </div>
-                    <div class="product-hero__cta">
-                        <a href="/#contact" class="btn btn--primary btn--lg">Get a Quote</a>
-                        <a href="tel:+919106545311" class="btn btn--outline btn--lg">Call: +91 91065 45311</a>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn-gold">Get Best Price</a>
+                        <a href="#specs" class="btn-glass">View Specs</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img src="/img/pico-second-laser-machine-1.png" alt="Pico Second Laser" class="hero-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-benefits">
+        <div class="container">
+            <div class="section-header-center">
+                <span class="section-subtitle">Why Pico Laser?</span>
+                <h2 class="section-title-dark">Fastest Pigment <br><em>Removal Technology</em></h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Ultra-Fast Pulses</h3>
+                    <p class="benefit-desc">Trillionths-of-a-second pulses shatter pigment into dust-like particles.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Less Downtime</h3>
+                    <p class="benefit-desc">Minimal heat damage means faster recovery and fewer sessions.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 2.69l5.74 3.32v6.63l-5.74 3.32-5.74-3.32V6.01l5.74-3.32z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">All Colors</h3>
+                    <p class="benefit-desc">Treats all tattoo ink colors and stubborn pigmentation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-functions">
+        <div class="container">
+            <div class="section-header-center">
+                <span class="section-subtitle">Applications</span>
+                <h2 class="section-title-dark">What Can Pico Laser Treat?</h2>
+            </div>
+            <div class="functions-container">
+                <div class="function-item"><span class="function-number">01</span>
+                    <div class="function-content">
+                        <h4>Tattoo Removal</h4>
+                        <p>Removes professional and amateur tattoos in fewer sessions.</p>
+                    </div>
+                </div>
+                <div class="function-item"><span class="function-number">02</span>
+                    <div class="function-content">
+                        <h4>Pigmentation</h4>
+                        <p>Treats melasma, sun spots, and age spots.</p>
+                    </div>
+                </div>
+                <div class="function-item"><span class="function-number">03</span>
+                    <div class="function-content">
+                        <h4>Acne Scars</h4>
+                        <p>Improves textural irregularities and pitted scars.</p>
+                    </div>
+                </div>
+                <div class="function-item"><span class="function-number">04</span>
+                    <div class="function-content">
+                        <h4>Skin Rejuvenation</h4>
+                        <p>Stimulates collagen for overall skin renewal.</p>
+                    </div>
+                </div>
+                <div class="function-item"><span class="function-number">05</span>
+                    <div class="function-content">
+                        <h4>Pore Reduction</h4>
+                        <p>Minimizes enlarged pores.</p>
+                    </div>
+                </div>
+                <div class="function-item"><span class="function-number">06</span>
+                    <div class="function-content">
+                        <h4>Wrinkle Reduction</h4>
+                        <p>Fine lines smoothing via collagen boost.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Product Description -->
-    <div class="product-description">
-        <h2>Pico Second Laser Machine</h2>
-        <p>The PicoSecond Laser uses ultra-short pulses (one trillionth of a second) to hit the melanin with a great
-            pressure, the melanin shatters into tiny dust-like particles. Because the particles are so small, they are
-            more readily absorbed and eliminated by the body. This can mean better clearance of the melanin and less
-            treatments overall.</p>
-        <p>PicoSecond Laser is a quick and easy non-surgical, non-invasive laser skin treatment for the body including
-            chest or decollete, face, hands, legs, and more.</p>
-
-        <h3>Applications:</h3>
-        <ul class="features-list">
-            <li>1. Tattoo removal (All color tattoo, eyeline and lipline removal)</li>
-            <li>2. Epidermis and dermis pigment (Removal of lesion, coffee spot, senile plaque, freckle, sunburn spot
-                and chloasma)</li>
-            <li>3. Acne scar treatment, Nevus of Ota, blue naevus, black nevus</li>
-            <li>4. Skin whitening and wrinkle removal etc</li>
-        </ul>
-
-        <h3>Advantages:</h3>
-        <ul class="features-list">
-            <li>1. <strong>High Energy & Shot Pulse Duration:</strong> The power emits in trillions of a second to skin
-                tissue, which can explore the pigment into much more small pieces than traditional Q:switch laser. The
-                pigment pieces can be absorbed more easily and faster.</li>
-            <li>2. <strong>Minimal Risk and Less Pain:</strong> Since the pulse duration has been reduced thousand of
-                time, less damage of skin is realized. The treatment is more safe and less pain.</li>
-            <li>3. <strong>Fast:</strong> For tattoo removal, usually 6-8 treatment is necessary by Traditional Q:switch
-                laser. With pico second laser, only 3-4 treatment is needed only for completely removal.</li>
-            <li>4. <strong>High Performance:</strong> Completely removal of tattoo and pigment can be reached with Pico
-                second technology.</li>
-        </ul>
-    </div>
-
-    <!-- Technical Specifications -->
-    <section class="product-specs">
+    <section class="section-specs" id="specs">
         <div class="container">
-            <h2 class="section-title">Technical Specifications</h2>
-            <div class="table-responsive">
+            <div class="section-header-center">
+                <h2 class="section-title-dark">Technical Specifications</h2>
+            </div>
+            <div class="specs-wrapper">
                 <table class="specs-table">
                     <tbody>
                         <tr>
-                            <th>Laser Type</th>
-                            <td>Pico second laser</td>
+                            <th>Technology</th>
+                            <td>Pico Second Laser (Nd:YAG)</td>
                         </tr>
                         <tr>
-                            <th>Wavelength</th>
-                            <td>1064nm/532nm/755nm/1320nm</td>
+                            <th>Wavelengths</th>
+                            <td>755nm, 532nm, 1064nm</td>
                         </tr>
                         <tr>
-                            <th>Pulse Width</th>
-                            <td>2000ps</td>
+                            <th>Pulse Duration</th>
+                            <td>450 picoseconds</td>
                         </tr>
                         <tr>
-                            <th>Repeated Frequency</th>
-                            <td>1-10Hz adjustable</td>
+                            <th>Energy</th>
+                            <td>Up to 2000mJ</td>
                         </tr>
                         <tr>
-                            <th>Spot Diameter</th>
-                            <td>2-10mm adjustable</td>
+                            <th>Frequency</th>
+                            <td>1-10 Hz</td>
                         </tr>
                         <tr>
-                            <th>Maximum Energy</th>
-                            <td>2000mj</td>
-                        </tr>
-                        <tr>
-                            <th>Power Supply</th>
-                            <td>AC 220V/50HZ</td>
-                        </tr>
-                        <tr>
-                            <th>Power</th>
-                            <td>2000 W</td>
+                            <th>Weight</th>
+                            <td>35 KG</td>
                         </tr>
                     </tbody>
                 </table>
@@ -180,14 +217,13 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="product-cta">
+    <section class="product-hero" style="padding: 80px 0; text-align: center;">
         <div class="container">
-            <h2>Ready to Add This Machine to Your Clinic?</h2>
-            <p>Contact our experts for pricing, demonstrations, and customized clinic solutions.</p>
-            <div class="cta-buttons">
-                <a href="/#contact" class="btn btn--primary btn--lg">Request Quote</a>
-                <a href="tel:+919106545311" class="btn btn--outline btn--lg">Call: +91 91065 45311</a>
+            <span class="hero-tagline" style="display: block; margin-bottom: 20px;">Industry-Leading Pico Laser</span>
+            <h2 class="hero-title" style="font-size: 3rem; margin-bottom: 30px;">Get The Best Price Today</h2>
+            <div class="hero-actions" style="justify-content: center;">
+                <a href="#contact" class="btn-gold">Request Quote</a>
+                <a href="tel:+919106545311" class="btn-glass">Call Us Now</a>
             </div>
         </div>
     </section>
@@ -199,42 +235,16 @@
                     <div class="footer__logo-wrap"><img src="/img/logo/Venus Skincare Logo_no_bg.png"
                             alt="Venus Skincare" class="footer__logo"><span class="footer__logo-text">Venus
                             Skincare</span></div>
-                    <p class="footer__description">A Complete Range Of Skin Care Machinery. Trusted by clinics worldwide
-                        for medical-grade quality and results.</p>
                 </div>
                 <div class="footer__links">
-                    <h4 class="footer__title">Quick Links</h4>
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/#machines">Products</a></li>
-                        <li><a href="/#about">About Us</a></li>
-                        <li><a href="/#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer__links">
-                    <h4 class="footer__title">Categories</h4>
-                    <ul>
-                        <li><a href="/categories/hair-removal-lasers.html">Hair Removal Lasers</a></li>
-                        <li><a href="/categories/multifunctional-lasers.html">Multifunctional Lasers</a></li>
-                        <li><a href="/categories/hydra-facial.html">Hydra Facial</a></li>
-                        <li><a href="/categories/q-switch-laser.html">Q Switch Laser</a></li>
-                    </ul>
-                </div>
-                <div class="footer__links">
-                    <h4 class="footer__title">Contact Us</h4>
+                    <h4 class="footer__title">Contact</h4>
                     <ul>
                         <li><a href="tel:+919106545311">+91 91065 45311</a></li>
-                        <li><a href="tel:+918320039331">+91 83200 39331</a></li>
-                        <li><a href="mailto:venusskincarelaser@gmail.com">venusskincarelaser@gmail.com</a></li>
-                        <li>Gota, Ahmedabad, Gujarat</li>
-                        <li>Mon - Sat: 10:00 AM - 07:00 PM</li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
-                <p>&copy; 2026 Venus Skincare. All rights reserved.</p>
-                <div class="footer__certifications"><span class="cert-badge">Medical Grade</span><span
-                        class="cert-badge">ISO Certified</span><span class="cert-badge">8 Years Experience</span></div>
+                <p>&copy; 2026 Venus Skincare.</p>
             </div>
         </div>
     </footer>

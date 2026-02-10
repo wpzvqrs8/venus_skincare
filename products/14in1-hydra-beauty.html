@@ -7,30 +7,53 @@
     <title>14 in 1 Hydra Beauty Skin System | Venus Skincare</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Playfair Display (Premium) & Inter (Clean) -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/src/styles/index.css">
     <link rel="stylesheet" href="/src/styles/product-detail.css">
 </head>
 
 <body>
+    <!-- Use existing Header from index (assumed) -->
     <header class="header" id="header">
         <div class="container header__inner">
             <a href="/" class="header__logo"><img src="/img/logo/Venus Skincare Logo_no_bg.png" alt="Venus Skincare"
-                    class="logo-img"><span class="logo-text">Venus Skincare</span></a>
+                    class="logo-img"><span class="logo-text"
+                    style="color: white; font-family: 'Playfair Display', serif;">Venus Skincare</span></a>
             <nav class="header__nav" id="nav">
                 <ul class="nav__list">
-                    <li><a href="/" class="nav__link">Home</a></li>
-                    <li><a href="/#machines" class="nav__link">Products</a></li>
-                    <li><a href="/#about" class="nav__link">About</a></li>
-                    <li><a href="/#contact" class="nav__link">Contact</a></li>
+                    <li><a href="/" class="nav__link" style="color: rgba(255,255,255,0.8)">Home</a></li>
+                    <li><a href="/#machines" class="nav__link" style="color: rgba(255,255,255,0.8)">Products</a></li>
+                    <li><a href="/#about" class="nav__link" style="color: rgba(255,255,255,0.8)">About</a></li>
+                    <li><a href="/#contact" class="nav__link" style="color: rgba(255,255,255,0.8)">Contact</a></li>
                 </ul>
             </nav>
-            <div class="header__actions"><a href="/#contact" class="btn btn--primary">Get a Quote</a></div>
-            <button class="header__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+            <div class="header__actions"><a href="/#contact" class="btn btn--primary"
+                    style="background: var(--gradient-gold); color: black; border: none;">Get a Quote</a></div>
+            <button class="header__hamburger" id="hamburger"
+                style="filter: invert(1);"><span></span><span></span><span></span></button>
         </div>
     </header>
+
+    <!-- Inline style to force header to be transparent/absolute for the immersive hero -->
+    <style>
+        .header {
+            background: rgba(11, 17, 32, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-text {
+            color: white !important;
+        }
+    </style>
+
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu__overlay"></div>
         <div class="mobile-menu__content"><button class="mobile-menu__close" id="closeMenu">&times;</button>
@@ -40,157 +63,255 @@
         </div>
     </div>
 
-    <!-- Product Hero Section -->
+    <!-- NEW HERO SECTION -->
     <section class="product-hero">
         <div class="container">
-            <nav class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/#machines">Products</a><span>/</span><a
-                    href="/categories/hydra-facial.html">Hydra Facial</a><span>/</span><span>14 in 1 Hydra Beauty</span>
-            </nav>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="hero-badge">Best Seller</span>
+                    <h1 class="hero-title">14 in 1 Hydra Beauty System</h1>
+                    <p class="hero-tagline">The Ultimate Facial Workstation</p>
+                    <p class="hero-description">Transform your clinic with our most comprehensive aesthetic system. 14
+                        professional technologies in one sleek device, offering complete facial rejuvenation from deep
+                        cleansing to advanced lifting.</p>
 
-            <div class="product-hero__grid">
-                <div class="product-hero__image">
-                    <div class="product-badge">Most Comprehensive</div>
-                    <img src="/img/14-in-1-hydra-beauty-skin-system-1.jpg" alt="14 in 1 Hydra Beauty Skin System"
-                        class="product-image">
-                </div>
-                <div class="product-hero__info">
-                    <h1 class="product-hero__title">14 in 1 Hydra Beauty Skin System</h1>
-                    <p class="product-hero__tagline">The Ultimate Facial Workstation</p>
-                    <p class="product-hero__description">A complete skincare center in one machine. Offering 14 distinct
-                        facial treatments including hydradermabrasion, diamond peeling, ultrasound, and bio-lifting to
-                        address every skin concern.</p>
-                    <div class="product-hero__features">
-                        <div class="feature-highlight">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            <span>14 Treatment Handles</span>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">14</span>
+                            <span class="stat-label">Treatment Handles</span>
                         </div>
-                        <div class="feature-highlight">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            <span>Total Skin Solution</span>
+                        <div class="stat-item">
+                            <span class="stat-value">98%</span>
+                            <span class="stat-label">Client Satisfaction</span>
                         </div>
-                        <div class="feature-highlight">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            <span>PDT Light Therapy</span>
-                        </div>
-                        <div class="feature-highlight">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
-                            <span>1 Year Warranty + AMC</span>
+                        <div class="stat-item">
+                            <span class="stat-value">1 yr</span>
+                            <span class="stat-label">Full Warranty</span>
                         </div>
                     </div>
-                    <div class="product-hero__cta">
-                        <a href="/#contact" class="btn btn--primary btn--lg">Get a Quote</a>
-                        <a href="tel:+919106545311" class="btn btn--outline btn--lg">Call: +91 91065 45311</a>
+
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn-gold">Get Best Price</a>
+                        <a href="#specs" class="btn-glass">View Specs</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <!-- Placeholder for the machine image - Ensure this path is correct -->
+                    <img src="/img/14-in-1-hydra-beauty-skin-system-1.jpg" alt="14 in 1 Hydra Beauty Machine"
+                        class="hero-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEY BENEFITS -->
+    <section class="section-benefits">
+        <div class="container">
+            <div class="section-header-center">
+                <span class="section-subtitle">Why Choose This Machine?</span>
+                <h2 class="section-title-dark">Advanced 7D Technologies <br><em>for Superior Results</em></h2>
+                <p style="color: var(--color-text-light);">Deliver medical-grade treatments with a system designed for
+                    versatility, performance, and patient comfort.</p>
+            </div>
+
+            <div class="benefits-grid">
+                <!-- Card 1 -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 2.69l5.74 3.32v6.63l-5.74 3.32-5.74-3.32V6.01l5.74-3.32z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Total Versatility</h3>
+                    <p class="benefit-desc">Replace unmatched 14 standalone devices with one compact workstation. Treat
+                        acne, wrinkles, pigmentation, and dehydration simultaneously.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Immediate ROI</h3>
+                    <p class="benefit-desc">Command higher treatment prices by offering comprehensive "Hydra-Facial"
+                        packages that combine exfoliation, extraction, and infusion.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Patient Comfort</h3>
+                    <p class="benefit-desc">Non-invasive, painless treatments with zero downtime. The advanced fluid
+                        delivery system ensures soothing hydration throughout the process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FUNCTIONS LIST -->
+    <section class="section-functions">
+        <div class="container">
+            <div class="section-header-center">
+                <span class="section-subtitle">What's Included</span>
+                <h2 class="section-title-dark">14 Professional Treatment Handles</h2>
+            </div>
+
+            <div class="functions-container">
+                <div class="function-item">
+                    <span class="function-number">01</span>
+                    <div class="function-content">
+                        <h4>Hydro Dermabrasion</h4>
+                        <p>Deep cleansing and exfoliation using water jets.</p>
+                    </div>
+                </div>
+                <!-- Repeat for other items -->
+                <div class="function-item">
+                    <span class="function-number">02</span>
+                    <div class="function-content">
+                        <h4>Diamond Peeling</h4>
+                        <p>Microdermabrasion for skin resurfacing.</p>
+                    </div>
+                </div>
+                <div class="function-item">
+                    <span class="function-number">03</span>
+                    <div class="function-content">
+                        <h4>Spray Gun</h4>
+                        <p>Nano-mist oxygen hydration infusion.</p>
+                    </div>
+                </div>
+                <div class="function-item">
+                    <span class="function-number">04</span>
+                    <div class="function-content">
+                        <h4>Ultrasonic (Face)</h4>
+                        <p>Deep product penetration for facial tissues.</p>
+                    </div>
+                </div>
+                <div class="function-item">
+                    <span class="function-number">05</span>
+                    <div class="function-content">
+                        <h4>Ultrasonic (Eyes)</h4>
+                        <p>Gentle focused waves for the delicate eye area.</p>
+                    </div>
+                </div>
+                <div class="function-item">
+                    <span class="function-number">06</span>
+                    <div class="function-content">
+                        <h4>Bio Microcurrent</h4>
+                        <p>Non-surgical face lifting and toning.</p>
+                    </div>
+                </div>
+                <div class="function-item">
+                    <span class="function-number">07</span>
+                    <div class="function-content">
+                        <h4>Skin Scrubber</h4>
+                        <p>High-frequency vibration to remove impurities.</p>
+                    </div>
+                </div>
+                <div class="function-item">
+                    <span class="function-number">08</span>
+                    <div class="function-content">
+                        <h4>High Frequency</h4>
+                        <p>Antibacterial action and acne treatment.</p>
+                    </div>
+                </div>
+                <div class="function-item">
+                    <span class="function-number">09</span>
+                    <div class="function-content">
+                        <h4>PDT Light Therapy</h4>
+                        <p>LED photon therapy for various skin concerns.</p>
+                    </div>
+                </div>
+                <div class="function-item">
+                    <span class="function-number">10</span>
+                    <div class="function-content">
+                        <h4>Photon Bio Brush (L)</h4>
+                        <p>Stimulates cell regeneration (Large area).</p>
+                    </div>
+                </div>
+                <div class="function-item">
+                    <span class="function-number">11</span>
+                    <div class="function-content">
+                        <h4>Photon Bio Brush (S)</h4>
+                        <p>Targeted stimulation (Small area).</p>
+                    </div>
+                </div>
+                <div class="function-item">
+                    <span class="function-number">12</span>
+                    <div class="function-content">
+                        <h4>Vacuum Pen</h4>
+                        <p>Lymphatic drainage and pore extraction.</p>
+                    </div>
+                </div>
+                <div class="function-item">
+                    <span class="function-number">13</span>
+                    <div class="function-content">
+                        <h4>Cold Hammer</h4>
+                        <p>Soothes skin and seals pores post-treatment.</p>
+                    </div>
+                </div>
+                <div class="function-item">
+                    <span class="function-number">14</span>
+                    <div class="function-content">
+                        <h4>Dr. Pen</h4>
+                        <p>Microneedling for collagen induction therapy.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Product Description -->
-    <div class="product-description">
-        <h2>Multifunctional 14 In 1 Hydra Beauty Facial Machine</h2>
-        <p>Hydra facial is a non-invasive treatment that builds healthy skin for the long term and provides immediate,
-            noticeable results in as little as 30 minutes. It is a 3-step treatment that removes dead skin cells and
-            extracts impurities while simultaneously bathing the new skin with cleansing, hydrating and moisturizing
-            serums. The treatment is soothing, refreshing, non-irritating and immediately effective.</p>
-        <p>Hydra dermabrasion is an all natural, virtually painless, skin treatment procedure that dramatically improves
-            the appearance and texture of your skin in a rapid manner and provides a discernible enhancement to the
-            recipient. Hydro dermabrasion treatments are highly effective in skin texture improvement, wrinkle
-            reduction, removal of unwanted pigmentation and overall skin rejuvenation. It is also very useful with acne,
-            blackheads and other comedone eruptions as it quickly and effortlessly removes them without any pain or
-            discomfort.</p>
-        <p>14 in 1 Hydra Facial Machine is equipped with 14 probes: Hydro dermabrasion, Diamond peeling, Spray Gun,
-            Ultrasonic for face, Ultrasonic for eyes, Bio, Skin Scrubber, High frequency, PDT Light, Photon bio brush x
-            2, Vacuum Pen, Cold Hammer, Dermapen.</p>
-        <p>It can solve various skin problems such as deep cleansing, moisturizing, whitening, acne, blackheads,
-            wrinkles, oily skin, lifting, firming, sensitive skin, etc. The 14 in 1 hydra facial machine is suitable for
-            all skin types and improves skin texture and tone.</p>
-
-        <h3>Functions :</h3>
-        <ul class="features-list">
-            <li>1. Hydro dermabrasion: Facial cleansing, peeling, pore cleansing.</li>
-            <li>2. Diamond peeling: Exfoliating dead skin, deep cleaning skin.</li>
-            <li>3. Spray Gun: Deep moisturizing and hydrating.</li>
-            <li>4. Ultrasonic for face: Nutrition import, promote absorption.</li>
-            <li>5. Ultrasonic for eyes: Promote nutrition absorption.</li>
-            <li>6. Bio: Lifting and tightening, remove wrinkles.</li>
-            <li>7. Skin Scrubber: Remove blackheads, keratin, dead skin, acne.</li>
-            <li>8. High frequency: Sterilization, acne removal.</li>
-            <li>9. PDT Light: Different PDT light has different functions, such as skin rejuvenation, acne removal,
-                whitening, etc.</li>
-            <li>10. Photon bio brush(1): promote essence absorption and massage.</li>
-            <li>11. Photon bio brush(2): promote essence absorption and massage.</li>
-            <li>12. Vacuum Pen: Massage, accelerate blood circulation.</li>
-            <li>13. Cold Hammer: Calm skin, shrink pores.</li>
-            <li>14. Dermapen: Promote collagen regeneration, tighten skin, repair deep skin.</li>
-        </ul>
-    </div>
-
-    <!-- Technical Specifications -->
-    <section class="product-specs">
+    <!-- SPECS -->
+    <section class="section-specs" id="specs">
         <div class="container">
-            <h2 class="section-title">Technical Specifications</h2>
-            <div class="table-responsive">
+            <div class="section-header-center">
+                <h2 class="section-title-dark">Technical Specifications</h2>
+            </div>
+            <div class="specs-wrapper">
                 <table class="specs-table">
                     <tbody>
                         <tr>
-                            <th>Vacuum</th>
-                            <td>100Kpa Max</td>
+                            <th>Display Control</th>
+                            <td>7-inch Color Touch Screen</td>
                         </tr>
                         <tr>
-                            <th>Max Output</th>
-                            <td>350 VA</td>
+                            <th>Vacuum Power</th>
+                            <td>100 Kpa (Adjustable)</td>
                         </tr>
                         <tr>
-                            <th>Operation Control</th>
-                            <td>Touch Screen 7 inches</td>
+                            <th>RF Frequency</th>
+                            <td>5 MHz / 1 MHz (Multipolar)</td>
                         </tr>
                         <tr>
-                            <th>Handpieces</th>
-                            <td>
-                                1) Hydra dermabrasion handle<br>
-                                2) Diamond peeling handle<br>
-                                3) Spray Gun<br>
-                                4) Ultrasonic handle for face<br>
-                                5) Ultrasonic handle for eyes<br>
-                                6) Bio handle<br>
-                                7) Skin Scrubber<br>
-                                8) High frequency handle<br>
-                                9) PDT Light<br>
-                                10) Photon bio brush(1)<br>
-                                11) Photon bio brush(2)<br>
-                                12) Vacuum Pen<br>
-                                13) Cold Hammer<br>
-                                14) Dermapen
-                            </td>
+                            <th>Ultrasound</th>
+                            <td>1 MHz / 1-3 million Hz</td>
                         </tr>
                         <tr>
-                            <th>Electrical</th>
-                            <td>100-240 VAC, 50Hz/60Hz</td>
+                            <th>Cooling Temp</th>
+                            <td>0°C to 5°C</td>
                         </tr>
                         <tr>
-                            <th>Packing Size</th>
-                            <td>56*46*70 cm</td>
+                            <th>Input Voltage</th>
+                            <td>AC 110V/220V, 50-60Hz</td>
                         </tr>
                         <tr>
-                            <th>Gross Weight</th>
-                            <td>45 kg</td>
+                            <th>Dimensions</th>
+                            <td>56 x 46 x 70 cm</td>
+                        </tr>
+                        <tr>
+                            <th>Weight</th>
+                            <td>45 KG</td>
                         </tr>
                     </tbody>
                 </table>
@@ -198,18 +319,19 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="product-cta">
+    <!-- CALL TO ACTION -->
+    <section class="product-hero" style="padding: 80px 0; text-align: center;">
         <div class="container">
-            <h2>Ready to Add This Machine to Your Clinic?</h2>
-            <p>Contact our experts for pricing, demonstrations, and customized clinic solutions.</p>
-            <div class="cta-buttons">
-                <a href="/#contact" class="btn btn--primary btn--lg">Request Quote</a>
-                <a href="tel:+919106545311" class="btn btn--outline btn--lg">Call: +91 91065 45311</a>
+            <span class="hero-tagline" style="display: block; margin-bottom: 20px;">Ready to Elevate Your Clinic?</span>
+            <h2 class="hero-title" style="font-size: 3rem; margin-bottom: 30px;">Get The Best Price Today</h2>
+            <div class="hero-actions" style="justify-content: center;">
+                <a href="#contact" class="btn-gold">Request Quote</a>
+                <a href="tel:+919106545311" class="btn-glass">Call Us Now</a>
             </div>
         </div>
     </section>
 
+    <!-- Reuse Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer__grid">
@@ -221,41 +343,19 @@
                         for medical-grade quality and results.</p>
                 </div>
                 <div class="footer__links">
-                    <h4 class="footer__title">Quick Links</h4>
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/#machines">Products</a></li>
-                        <li><a href="/#about">About Us</a></li>
-                        <li><a href="/#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer__links">
-                    <h4 class="footer__title">Categories</h4>
-                    <ul>
-                        <li><a href="/categories/hair-removal-lasers.html">Hair Removal Lasers</a></li>
-                        <li><a href="/categories/multifunctional-lasers.html">Multifunctional Lasers</a></li>
-                        <li><a href="/categories/hydra-facial.html">Hydra Facial</a></li>
-                        <li><a href="/categories/q-switch-laser.html">Q Switch Laser</a></li>
-                    </ul>
-                </div>
-                <div class="footer__links">
                     <h4 class="footer__title">Contact Us</h4>
                     <ul>
                         <li><a href="tel:+919106545311">+91 91065 45311</a></li>
-                        <li><a href="tel:+918320039331">+91 83200 39331</a></li>
-                        <li><a href="mailto:venusskincarelaser@gmail.com">venusskincarelaser@gmail.com</a></li>
                         <li>Gota, Ahmedabad, Gujarat</li>
-                        <li>Mon - Sat: 10:00 AM - 07:00 PM</li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
                 <p>&copy; 2026 Venus Skincare. All rights reserved.</p>
-                <div class="footer__certifications"><span class="cert-badge">Medical Grade</span><span
-                        class="cert-badge">ISO Certified</span><span class="cert-badge">8 Years Experience</span></div>
             </div>
         </div>
     </footer>
+
     <script type="module" src="/src/main.js"></script>
 </body>
 
