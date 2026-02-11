@@ -151,6 +151,14 @@ function updateAuthUI() {
 // Initialize auth UI on load
 updateAuthUI();
 
+// Check for login/signup query param
+if (window.location.search.includes('login=true')) {
+    setTimeout(() => openModal(elements.loginModal), 500);
+} else if (window.location.search.includes('signup=true')) {
+    setTimeout(() => openModal(elements.signupModal), 500);
+}
+
+
 // ==================== HEADER SCROLL EFFECT ====================
 let lastScroll = 0;
 window.addEventListener('scroll', () => {

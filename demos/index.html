@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demos | Venus Skincare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../src/styles/index.css">
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
+            color: white;
+        }
+
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .restricted-container {
+            position: relative;
+            min-height: 600px;
+        }
+
+        .restricted-content {
+            transition: filter 0.3s ease;
+        }
+
+        .restricted-content.blurred {
+            filter: blur(8px);
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .restriction-overlay {
+            position: absolute;
+            inset: 0;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .restriction-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            border: 1px solid var(--color-gold);
+        }
+
+        .restriction-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .demos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 0;
+        }
+
+        .demo-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease;
+        }
+
+        .demo-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .demo-thumbnail {
+            width: 100%;
+            height: 200px;
+            object-fit: contain; padding: 10px;
+            background: #f1f5f9;
+        }
+
+        .demo-content {
+            padding: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="../" class="header__logo">
+                <img src="../img/logo/Venus Skincare Logo_no_bg.png" alt="Venus Skincare" class="logo-img">
+                <span class="logo-text">Venus Skincare</span>
+            </a>
+
+            <nav class="header__nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="../" class="nav__link">Home</a></li>
+                    <li><a href="../#machines" class="nav__link">Machines</a></li>
+                    <li><a href="" class="nav__link active">Demos</a></li>
+                    <li><a href="../#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions" id="headerActions">
+                <button class="btn btn--ghost" id="loginBtn">Login</button>
+                <button class="btn btn--primary" id="signupBtn">Get Started</button>
+            </div>
+
+            <!-- User Profile -->
+            <div class="header__user" id="userProfile" style="display: none;">
+                <div class="user-avatar" id="userAvatar"><span id="userInitial">U</span></div>
+                <span class="user-name" id="userName">User</span>
+                <button class="btn btn--ghost btn--sm" id="logoutBtn">Logout</button>
+            </div>
+
+            <button class="header__hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu__overlay"></div>
+        <div class="mobile-menu__content">
+            <button class="mobile-menu__close" id="closeMenu">&times;</button>
+            <nav class="mobile-menu__nav">
+                <a href="" class="mobile-menu__link">Home</a>
+                <a href="../#machines" class="mobile-menu__link">Machines</a>
+                <a href="" class="mobile-menu__link">Demos</a>
+                <a href="../#contact" class="mobile-menu__link">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Login Modal (Reused) -->
+    <div class="modal" id="loginModal">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <button class="modal__close">&times;</button>
+            <h2 class="modal__title">Welcome Back</h2>
+            <p class="modal__subtitle">Login to access premium demos</p>
+            <form class="modal__form" id="loginForm">
+                <div class="form-message" id="loginMessage"></div>
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <input type="email" id="loginEmail" placeholder="Email Address"
+                        style="width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 8px;">
+                    <span class="form-error" id="loginEmailError"></span>
+                </div>
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <input type="password" id="loginPassword" placeholder="Password"
+                        style="width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 8px;">
+                    <span class="form-error" id="loginPasswordError"></span>
+                </div>
+                <button type="submit" class="btn btn--primary btn--full">Login</button>
+            </form>
+            <div class="modal__footer">
+                Don't have an account? <a href="#" id="showSignup">Sign up</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal (Reused) -->
+    <div class="modal" id="signupModal">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <button class="modal__close">&times;</button>
+            <h2 class="modal__title">Create Account</h2>
+            <p class="modal__subtitle">Get full access to machine demos</p>
+            <form class="modal__form" id="signupForm">
+                <div class="form-message" id="signupMessage"></div>
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <input type="text" id="signupName" placeholder="Full Name"
+                        style="width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 8px;">
+                    <span class="form-error" id="signupNameError"></span>
+                </div>
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <input type="email" id="signupEmail" placeholder="Email Address"
+                        style="width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 8px;">
+                    <span class="form-error" id="signupEmailError"></span>
+                </div>
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <input type="password" id="signupPassword" placeholder="Password"
+                        style="width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 8px;">
+                    <span class="form-error" id="signupPasswordError"></span>
+                </div>
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <input type="password" id="signupConfirm" placeholder="Confirm Password"
+                        style="width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 8px;">
+                    <span class="form-error" id="signupConfirmError"></span>
+                </div>
+                <button type="submit" class="btn btn--primary btn--full">Create Account</button>
+            </form>
+            <div class="modal__footer">
+                Already have an account? <a href="#" id="showLogin">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Machine Demos</h1>
+                <p>Watch detailed usage guides and operational videos for our premium devices.</p>
+            </div>
+        </section>
+
+        <section class="demos-section">
+            <div class="container restricted-container">
+                <!-- Restriction Overlay -->
+                <div class="restriction-overlay" id="restrictionOverlay">
+                    <div class="restriction-card">
+                        <span class="restriction-icon">🔒</span>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Login Required</h3>
+                        <p style="color: #64748b; margin-bottom: 1.5rem;">Please login to view our exclusive machine
+                            demonstrations and training videos.</p>
+                        <button class="btn btn--primary btn--full" onclick="document.getElementById('loginBtn').click()"
+                            style="margin-bottom: 1rem;">Login Now</button>
+                        <p style="font-size: 0.9rem; color: #94a3b8;">Don't have an account? <a href="#"
+                                onclick="document.getElementById('signupBtn').click(); return false;"
+                                style="color: var(--color-accent);">Sign up</a></p>
+                    </div>
+                </div>
+
+                <!-- Blurred Content when locked -->
+                <div class="restricted-content" id="restrictedContent">
+                    <div class="demos-grid">
+                        <div class="demo-card">
+                            <a href="14in1-hydra-beauty-demo/" style="display: block;">
+                                <img src="../img/14-in-1-hydra-beauty-skin-system-1.jpg" alt="14In1 Hydra Beauty Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        14In1 Hydra Beauty</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="3in1-machine-demo/" style="display: block;">
+                                <img src="../img/ipl-hair-removal-laser-machine-01.jpg" alt="3In1 Machine Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        3In1 Machine</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="4d-hifu-demo/" style="display: block;">
+                                <img src="../img/7d-portable-hifu-1.jpg" alt="4D Hifu Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        4D Hifu</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="7d-hifu-demo/" style="display: block;">
+                                <img src="../img/7d-portable-hifu-1.jpg" alt="7D Hifu Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        7D Hifu</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="7in1-h2o2-demo/" style="display: block;">
+                                <img src="../img/7-in-1-h2o2-machine-1.png" alt="7In1 H2O2 Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        7In1 H2O2</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="8in1-hydrafacial-demo/" style="display: block;">
+                                <img src="../img/8-in-1-hydrafacial-machine-1.png" alt="8In1 Hydrafacial Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        8In1 Hydrafacial</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="accessories-demo/" style="display: block;">
+                                <img src="../img/needles-01.jpg" alt="Accessories Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        Accessories</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="alex-laser-demo/" style="display: block;">
+                                <img src="../img/portable-diode-hair-removal-machine-01.png" alt="Alex Laser Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        Alex Laser</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="alice-super-bubble-demo/" style="display: block;">
+                                <img src="../img/alice-super-bubble-facial-machine-1.jpg" alt="Alice Super Bubble Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        Alice Super Bubble</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="co2-fractional-demo/" style="display: block;">
+                                <img src="../img/factional-co2-laser-machines-1.png" alt="Co2 Fractional Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        Co2 Fractional</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="derma-chair-demo/" style="display: block;">
+                                <img src="../img/derma-chair-delux-model-5.png" alt="Derma Chair Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        Derma Chair</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="derma-pen-a6-demo/" style="display: block;">
+                                <img src="../img/dr-derma-pen-ultima-a6-1.jpg" alt="Derma Pen A6 Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        Derma Pen A6</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="diode-laser-handle-demo/" style="display: block;">
+                                <img src="../img/portable-diode-hair-removal-machine-01.png" alt="Diode Laser Handle Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        Diode Laser Handle</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="drs-roller-demo/" style="display: block;">
+                                <img src="../img/drs-derma-roller-1.jpg" alt="Drs Roller Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        Drs Roller</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="hair-helmet-demo/" style="display: block;">
+                                <img src="../img/hair-regrowth-helmet-light-1.jpg" alt="Hair Helmet Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        Hair Helmet</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="ipl-3in1-demo/" style="display: block;">
+                                <img src="../img/ipl-hair-removal-laser-machine-01.jpg" alt="Ipl 3In1 Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        Ipl 3In1</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="ipl-shr-demo/" style="display: block;">
+                                <img src="../img/ipl-hair-removal-laser-machine-01.jpg" alt="Ipl Shr Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        Ipl Shr</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="multifunctional-laser-demo/" style="display: block;">
+                                <img src="../img/ipl-hair-removal-laser-machine-01.jpg" alt="Multifunctional Laser Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        Multifunctional Laser</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="nd-yag-1064-demo/" style="display: block;">
+                                <img src="../img/q-switched-nd-yag-laser-machine-1.jpg" alt="Nd Yag 1064 Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        Nd Yag 1064</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="omega-led-demo/" style="display: block;">
+                                <img src="../img/omega-led-light-1.jpg" alt="Omega Led Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        Omega Led</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="pico-second-laser-demo/" style="display: block;">
+                                <img src="../img/pico-second-laser-machine-q-switch-nd-yag-laser-1.jpg" alt="Pico Second Laser Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        Pico Second Laser</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="q-switched-nd-yag-demo/" style="display: block;">
+                                <img src="../img/q-switched-nd-yag-laser-machine-1.jpg" alt="Q Switched Nd Yag Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">Q
+                                        Switched Nd Yag</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="rf-cautery-demo/" style="display: block;">
+                                <img src="../img/rf-cautery-machine-1.jpg" alt="Rf Cautery Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        Rf Cautery</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="skin-analyzer-demo/" style="display: block;">
+                                <img src="../img/skin-analyzer-1.jpg" alt="Skin Analyzer Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        Skin Analyzer</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="venus-chairs-demo/" style="display: block;">
+                                <img src="../img/derma-chair-delux-model-5.png" alt="Venus Chairs Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        Venus Chairs</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="venus-diode-1-demo/" style="display: block;">
+                                <img src="../img/portable-diode-hair-removal-machine-01.png" alt="Venus Diode 1 Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        Venus Diode 1</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="venus-diode-2-demo/" style="display: block;">
+                                <img src="../img/portable-diode-hair-removal-machine-01.png" alt="Venus Diode 2 Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        Venus Diode 2</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="venus-diode-3-demo/" style="display: block;">
+                                <img src="../img/portable-diode-hair-removal-machine-01.png" alt="Venus Diode 3 Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        Venus Diode 3</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="demo-card">
+                            <a href="zgts-roller-demo/" style="display: block;">
+                                <img src="../img/zgts-derma-roller-1.jpg" alt="Zgts Roller Demo"
+                                    class="demo-thumbnail">
+                                <div class="demo-content">
+                                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--color-primary);">
+                                        Zgts Roller</h3>
+                                    <p style="color: #64748b; font-size: 0.9rem;">Operational guide and treatment steps.
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__bottom">
+                <p>&copy; 2026 Venus Skincare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../src/main.js"></script>
+    <script type="module">
+        import { AuthManager, updateAuthUI } from './src/main.js';
+
+        // Initial check
+        checkRestriction();
+
+        // Listen for auth changes (mocked by interval or event dispatch if we had it)
+        // For now, we'll hook into the UI update
+        window.addEventListener('storage', checkRestriction);
+
+        // We need to override or hook into the updateAuthUI... 
+        // Actually, main.js runs updateAuthUI on load. 
+        // Let's add a poller or expose a listener. 
+        // Simpler: Just run check every 500ms or check on click.
+
+        function checkRestriction() {
+            const isLoggedIn = sessionStorage.getItem('venus_session'); // Direct check to match main.js logic
+
+            const overlay = document.getElementById('restrictionOverlay');
+            const content = document.getElementById('restrictedContent');
+
+            if (isLoggedIn) {
+                overlay.style.display = 'none';
+                content.classList.remove('blurred');
+            } else {
+                overlay.style.display = 'flex';
+                content.classList.add('blurred');
+            }
+        }
+
+        // Run check periodically to catch login changes
+        setInterval(checkRestriction, 1000);
+    </script>
+</body>
+
+</html>

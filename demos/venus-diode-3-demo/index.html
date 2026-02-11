@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venus Diode 3 Demo | Venus Skincare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../src/styles/index.css">
+    <link rel="stylesheet" href="../../src/styles/product-detail.css">
+    <style>
+        .demo-hero {
+            padding: 120px 0 60px;
+            background: #f8fafc;
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            aspect-ratio: 16/9;
+            background: #000;
+            border-radius: 1rem;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0.8;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .play-button:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .steps-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 2rem;
+            padding: 2rem;
+            border-bottom: 1px solid #e2e8f0;
+            transition: background 0.3s ease;
+        }
+
+        .step-item:hover {
+            background: #f8fafc;
+        }
+
+        .step-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #cbd5e1;
+            font-family: 'Playfair Display', serif;
+            min-width: 60px;
+        }
+
+        .step-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-primary);
+        }
+
+        .step-content p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .hidden-step {
+            display: none;
+        }
+
+        .show-more-btn {
+            display: block;
+            margin: 3rem auto 0;
+            padding: 1rem 3rem;
+            background: var(--color-primary);
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .show-more-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Restriction Overrides */
+        .restricted-content.blurred {
+            filter: blur(15px);
+            pointer-events: none;
+            user-select: none;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .restriction-overlay {
+            position: fixed;
+            /* Fixed for full screen block */
+            inset: 0;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .restriction-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            border: 1px solid var(--color-gold);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Restriction Overlay -->
+    <div class="restriction-overlay" id="restrictionOverlay">
+        <div class="restriction-card">
+            <span style="font-size: 3rem; margin-bottom: 1rem; display: block;">🔒</span>
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Restricted Access</h3>
+            <p style="color: #64748b; margin-bottom: 1.5rem;">This demo video is available for registered members only.
+            </p>
+            <button class="btn btn--primary btn--full" onclick="window.location.href='../demos.html?login=true'"
+                style="margin-bottom: 1rem;">Login to View</button>
+            <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 0.5rem;">Don't have an account? <a
+                    href="../../demos.html?signup=true" style="color: var(--color-accent);">Sign up</a></p>
+            <p style="font-size: 0.9rem; color: #94a3b8;"><a href="../"
+                    style="text-decoration: underline;">Back to Demos</a></p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="restricted-content" id="restrictedContent">
+        <header class="header" id="header">
+            <div class="container header__inner">
+                <a href="../../" class="header__logo">
+                    <img src="../../img/logo/Venus Skincare Logo_no_bg.png" alt="Venus Skincare" class="logo-img">
+                    <span class="logo-text" style="font-family: 'Playfair Display', serif;">Venus Skincare</span>
+                </a>
+
+                <nav class="header__nav" id="nav">
+                    <ul class="nav__list">
+                        <li><a href="../../" class="nav__link">Home</a></li>
+                        <li><a href="../../#machines" class="nav__link">Machines</a></li>
+                        <li><a href="../" class="nav__link active">Demos</a></li>
+                        <li><a href="../../#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header__actions" style="opacity: 0; pointer-events: none;">
+                    <!-- Hide auth buttons on this page to prevent confusion, better to redirect -->
+                </div>
+            </div>
+        </header>
+
+        <section class="demo-hero">
+            <div class="container">
+                <div class="section-header-center" style="margin-bottom: 3rem;">
+                    <span class="section-subtitle">Operational Guide</span>
+                    <h1 class="section-title-dark">Venus Diode 3</h1>
+                </div>
+
+                <div class="video-container">
+                    <!-- Placeholder image acting as video thumbnail -->
+                    <img src="../../img/portable-diode-hair-removal-machine-01.png" alt="Demo Video"
+                        class="video-placeholder">
+                    <div class="play-button">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="steps-section">
+            <div class="container">
+                <h2
+                    style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 3rem; text-align: center;">
+                    Treatment Procedure</h2>
+
+                <!-- Safety Warning -->
+                <div
+                    style="background: #fff4f4; border-left: 4px solid #ef4444; padding: 1.5rem; margin-bottom: 3rem; border-radius: 0.5rem;">
+                    <h3 style="color: #ef4444; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                            <line x1="12" y1="9" x2="12" y2="13" />
+                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                        </svg>
+                        IMPORTANT
+                    </h3>
+                    <ul style="list-style-type: disc; padding-left: 1.5rem; color: #7f1d1d; font-size: 0.95rem;">
+                        <li>Only trained professionals should operate this device.</li>
+                        <li>Always follow the manufacturer’s manual for your exact model.</li>
+                        <li>Perform a patch test before full treatment.</li>
+                    </ul>
+                </div>
+
+                <div class="steps-list" id="stepsList">
+                    <!-- Step 1 -->
+                    <div class="step-item"><div class="step-number">01</div><div class="step-content"><h3>Prepare the Client</h3><p>Shave the area, clean skin, and ensure it is dry. Wear safety goggles.</p></div></div>
+                    <!-- Step 2 -->
+                    <div class="step-item"><div class="step-number">02</div><div class="step-content"><h3>Gel Application</h3><p>Apply ultrasound gel.</p></div></div>
+                    <!-- Step 3 -->
+                    <div class="step-item"><div class="step-number">03</div><div class="step-content"><h3>Settings</h3><p>Select skin type and hair thickness.</p></div></div>
+                    <!-- Hidden -->
+                    <div class="step-item hidden-step"><div class="step-number">04</div><div class="step-content"><h3>Treatment</h3><p>Use sliding (SHR) or stamping (HR) motion.</p></div></div>
+                    <div class="step-item hidden-step"><div class="step-number">05</div><div class="step-content"><h3>Post-Care</h3><p>Clean area and apply aloe vera.</p></div></div>
+                    <div class="step-item hidden-step"><div class="step-number">06</div><div class="step-content"><h3>Maintenance</h3><p>Clean handpiece with disinfectant.</p></div></div>
+</div>
+                        <div class="step-content">
+                            <h3>Prepare the Client</h3>
+                            <ul style="list-style: disc; padding-left: 1.25rem; color: #64748b; margin-top: 0.5rem;">
+                                <li>Shave the treatment area (no waxing or plucking).</li>
+                                <li>Clean the skin to remove oil, lotion, or makeup.</li>
+                                <li>Dry the area completely.</li>
+                                <li>Provide protective laser safety goggles to the client and operator.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="step-item">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h3>Power On the Machine</h3>
+                            <ul style="list-style: disc; padding-left: 1.25rem; color: #64748b; margin-top: 0.5rem;">
+                                <li>Insert the key into the key switch.</li>
+                                <li>Turn the key clockwise to power on.</li>
+                                <li>Release the emergency stop button (twist it if pressed).</li>
+                                <li>Allow the system to boot up.</li>
+                                <li>Check water level (if required for cooling system).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="step-item">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h3>Select Treatment Settings</h3>
+                            <ul style="list-style: disc; padding-left: 1.25rem; color: #64748b; margin-top: 0.5rem;">
+                                <li>Choose treatment mode (e.g., HR = Hair Removal, SR = Skin Rejuvenation).</li>
+                                <li>Set parameters: Energy (J/cm²), Pulse width (ms), Frequency (Hz).</li>
+                                <li>Adjust settings according to Skin type (Fitzpatrick I–VI), Hair thickness/color, and
+                                    Treatment area.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Hidden Steps (4-9) -->
+                    <div class="step-item hidden-step">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h3>Apply Cooling / Gel</h3>
+                            <ul style="list-style: disc; padding-left: 1.25rem; color: #64748b; margin-top: 0.5rem;">
+                                <li>Apply a thin, even layer of ultrasound gel on the treatment area.</li>
+                                <li>Ensure full contact between handpiece and skin.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item hidden-step">
+                        <div class="step-number">05</div>
+                        <div class="step-content">
+                            <h3>Perform Patch Test</h3>
+                            <ul style="list-style: disc; padding-left: 1.25rem; color: #64748b; margin-top: 0.5rem;">
+                                <li>Select a small area.</li>
+                                <li>Deliver 1–2 pulses.</li>
+                                <li>Wait 10–15 minutes.</li>
+                                <li>Check for adverse reaction (excess redness, blistering).</li>
+                                <li>Adjust energy if needed.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item hidden-step">
+                        <div class="step-number">06</div>
+                        <div class="step-content">
+                            <h3>Start Treatment</h3>
+                            <ul style="list-style: disc; padding-left: 1.25rem; color: #64748b; margin-top: 0.5rem;">
+                                <li>Place the handpiece flat against the skin.</li>
+                                <li>Ensure full contact.</li>
+                                <li>Press the foot pedal or trigger button.</li>
+                                <li>Move in a grid pattern: Slight overlap (10–20%), Do not stack pulses.</li>
+                                <li>Continue until entire area is covered.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item hidden-step">
+                        <div class="step-number">07</div>
+                        <div class="step-content">
+                            <h3>After Treatment Care</h3>
+                            <ul style="list-style: disc; padding-left: 1.25rem; color: #64748b; margin-top: 0.5rem;">
+                                <li>Wipe off gel.</li>
+                                <li>Apply soothing aloe vera or cooling cream.</li>
+                                <li><strong>Advise client:</strong> Avoid sun exposure for 1–2 weeks, Use SPF 30+
+                                    sunscreen daily, Avoid hot showers/sauna for 24–48 hours.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item hidden-step">
+                        <div class="step-number">08</div>
+                        <div class="step-content">
+                            <h3>Shut Down Machine</h3>
+                            <ul style="list-style: disc; padding-left: 1.25rem; color: #64748b; margin-top: 0.5rem;">
+                                <li>Return settings to standby.</li>
+                                <li>Turn key to OFF position.</li>
+                                <li>Press emergency stop if required.</li>
+                                <li>Clean handpiece with approved disinfectant.</li>
+                                <li>Cover the machine.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step-item hidden-step">
+                        <div class="step-number">09</div>
+                        <div class="step-content">
+                            <h3>Maintenance Tips</h3>
+                            <ul style="list-style: disc; padding-left: 1.25rem; color: #64748b; margin-top: 0.5rem;">
+                                <li>Check water level regularly.</li>
+                                <li>Clean filters monthly.</li>
+                                <li>Do not block air vents.</li>
+                                <li>Schedule professional servicing as recommended.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="show-more-btn" id="showMoreBtn">Show More</button>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__bottom">
+                    <p>&copy; 2026 Venus Skincare.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Check Authentication
+        function checkAccess() {
+            const isLoggedIn = sessionStorage.getItem('venus_session');
+            const overlay = document.getElementById('restrictionOverlay');
+            const content = document.getElementById('restrictedContent');
+
+            if (!isLoggedIn) {
+                overlay.style.display = 'flex';
+                content.classList.add('blurred');
+            } else {
+                overlay.style.display = 'none';
+                content.classList.remove('blurred');
+            }
+        }
+
+        checkAccess();
+
+        // Show More Functionality
+        const showMoreBtn = document.getElementById('showMoreBtn');
+        showMoreBtn.addEventListener('click', () => {
+            const hiddenSteps = document.querySelectorAll('.hidden-step');
+            hiddenSteps.forEach(step => {
+                step.style.display = 'flex';
+                // slight animation
+                step.style.opacity = 0;
+                setTimeout(() => step.style.opacity = 1, 50);
+            });
+            showMoreBtn.style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>
