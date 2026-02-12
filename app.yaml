@@ -1,0 +1,11 @@
+kind: wasmer.io/App.v0
+name: venus_skincare_demo_v4
+
+router:
+  routes:
+    - path: /*
+      methods:
+        - GET
+      handler: static
+      options:
+        fallback_index: true
